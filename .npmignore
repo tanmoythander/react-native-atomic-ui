@@ -1,0 +1,46 @@
+# Dependencies
+node_modules/
+.npm
+
+# Development files
+src/
+__tests__/
+examples/
+docs/
+
+# Config files
+*.config.js
+.eslintrc.js
+.prettierrc.json
+jest.setup.js
+tsconfig.json
+
+# Git files
+.git
+.gitignore
+.github
+
+# Documentation
+*.md
+!README.md
+!LICENSE
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# CI
+.github/
+.gitlab-ci.yml
+.travis.yml
+
+# Other
+coverage/
+.nyc_output/
+*.tgz

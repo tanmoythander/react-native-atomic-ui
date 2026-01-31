@@ -1,0 +1,74 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+.cache/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+*.iml
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Testing
+coverage/
+.nyc_output/
+*.lcov
+
+# Runtime
+*.pid
+*.seed
+*.pid.lock
+.env
+.env.local
+.env.*.local
+
+# RN
+.react-native-debugger
+ios/Pods/
+ios/Podfile.lock
+android/.gradle/
+android/local.properties
+android/app/debug.keystore
+
+# IDE specific
+.vscode/
+.idea/
+*.swp
+*.swo
+.c9/
+*.sublime-workspace
+
+# Git
+.git
+.github
+
+# Other
+*.tgz
+temp/
+tmp/
+.turbo/
