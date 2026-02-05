@@ -56,7 +56,7 @@ android/local.properties
 android/app/debug.keystore
 
 # IDE specific
-.vscode/
+# .vscode/
 .idea/
 *.swp
 *.swo
@@ -65,7 +65,7 @@ android/app/debug.keystore
 
 # Git
 .git
-.github
+# .github
 
 # Other
 *.tgz
