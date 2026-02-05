@@ -9,7 +9,7 @@
  * npm install github:starburst997/10tap-editor#jd
  *
  * Usage:
- * import { RichText, RichTextInput } from '@react-native-atomic-ui/core/rich-text';
+ * import { RichText, RichTextInput } from 'react-native-atomic-ui/rich-text';
  */
 
 export interface RichTextProps {

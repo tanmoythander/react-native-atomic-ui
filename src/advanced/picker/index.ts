@@ -6,7 +6,7 @@
  * npm install react-native-picker-select
  *
  * Usage:
- * import { BorderedPickerInput } from '@react-native-atomic-ui/core/picker';
+ * import { BorderedPickerInput } from 'react-native-atomic-ui/picker';
  */
 
 export interface PickerOption {

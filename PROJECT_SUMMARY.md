@@ -1,4 +1,4 @@
-# @react-native-atomic-ui/core - Project Summary
+# react-native-atomic-ui - Project Summary
 
 **Project**: React Native Atomic UI Library  
 **Status**: ✅ **BUILD COMPLETE - READY FOR SETUP**  
@@ -419,7 +419,7 @@ Use this checklist to verify everything is ready:
 
 ## 🎉 Summary
 
-**@react-native-atomic-ui/core** is now fully scaffolded and ready for:
+**react-native-atomic-ui** is now fully scaffolded and ready for:
 
 1. ✅ **Development** - Start implementing remaining components
 2. ✅ **Testing** - Run comprehensive test suite

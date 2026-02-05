@@ -6,7 +6,7 @@
  * npm install @react-native-community/datetimepicker
  *
  * Usage:
- * import { DatePickerInput } from '@react-native-atomic-ui/core/date-picker';
+ * import { DatePickerInput } from 'react-native-atomic-ui/date-picker';
  */
 
 export interface DatePickerInputProps {

@@ -1,4 +1,4 @@
-# @react-native-atomic-ui/core
+# react-native-atomic-ui
 
 **A zero-dependency atomic UI component library for React Native with built-in dark mode support.**
 
@@ -51,9 +51,9 @@
 ### Basic Setup
 
 ```bash
-npm install @react-native-atomic-ui/core react-native
+npm install react-native-atomic-ui react-native
 # or
-yarn add @react-native-atomic-ui/core react-native
+yarn add react-native-atomic-ui react-native
 ```
 
 ### With Optional Components
@@ -84,7 +84,7 @@ Wrap your app with `ThemeProvider` at the root level:
 
 ```typescript
 import React from 'react';
-import { ThemeProvider } from '@react-native-atomic-ui/core';
+import { ThemeProvider } from 'react-native-atomic-ui';
 import { App } from './App';
 
 export function Root() {
@@ -107,7 +107,7 @@ import {
   H1,
   Body1,
   useTheme,
-} from '@react-native-atomic-ui/core';
+} from 'react-native-atomic-ui';
 
 export function MyScreen() {
   const { theme, isDark, toggleTheme } = useTheme();
@@ -137,7 +137,7 @@ export function MyScreen() {
 The library automatically detects system color scheme and provides both light and dark themes:
 
 ```typescript
-import { useTheme } from '@react-native-atomic-ui/core';
+import { useTheme } from 'react-native-atomic-ui';
 
 export function ThemedComponent() {
   const { theme, isDark, toggleTheme } = useTheme();
@@ -196,7 +196,7 @@ theme.spacing.xxl  // 48px
 Use named variants for consistent typography:
 
 ```typescript
-import { H1, Body1, Caption, Text, useTheme } from '@react-native-atomic-ui/core';
+import { H1, Body1, Caption, Text, useTheme } from 'react-native-atomic-ui';
 
 export function TypographyExample() {
   const { theme } = useTheme();
@@ -308,7 +308,7 @@ Advanced components require specific peer dependencies. Import them from submodu
 ### Date Picker
 
 ```typescript
-import { DatePickerInput } from '@react-native-atomic-ui/core/date-picker';
+import { DatePickerInput } from 'react-native-atomic-ui/date-picker';
 
 // Requires: npm install @react-native-community/datetimepicker
 
@@ -323,7 +323,7 @@ import { DatePickerInput } from '@react-native-atomic-ui/core/date-picker';
 ### Pickers
 
 ```typescript
-import { BorderedPickerInput } from '@react-native-atomic-ui/core/picker';
+import { BorderedPickerInput } from 'react-native-atomic-ui/picker';
 
 // Requires: npm install react-native-picker-select
 
@@ -341,7 +341,7 @@ import { BorderedPickerInput } from '@react-native-atomic-ui/core/picker';
 ### File Picker
 
 ```typescript
-import { FilePicker } from '@react-native-atomic-ui/core/file-picker';
+import { FilePicker } from 'react-native-atomic-ui/file-picker';
 
 // Requires: npm install @react-native-documents/picker
 
@@ -354,7 +354,7 @@ import { FilePicker } from '@react-native-atomic-ui/core/file-picker';
 ### Rich Text
 
 ```typescript
-import { RichText, RichTextInput } from '@react-native-atomic-ui/core/rich-text';
+import { RichText, RichTextInput } from 'react-native-atomic-ui/rich-text';
 
 // Requires: npm install react-native-webview
 // For editor: npm install github:starburst997/10tap-editor#jd
@@ -377,7 +377,7 @@ import {
   ThemeContextValue,
   BoxProps,
   ButtonProps,
-} from '@react-native-atomic-ui/core';
+} from 'react-native-atomic-ui';
 
 // All components are fully typed
 const myComponent: React.FC<BoxProps> = (props) => {
@@ -413,7 +413,7 @@ const myComponent: React.FC<BoxProps> = (props) => {
 Make sure your app is wrapped with `ThemeProvider`:
 
 ```typescript
-import { ThemeProvider } from '@react-native-atomic-ui/core';
+import { ThemeProvider } from 'react-native-atomic-ui';
 
 export function Root() {
   return (
@@ -481,5 +481,5 @@ Contributions are welcome! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for g
 ## 🔗 Links
 
 - [GitHub Repository](https://github.com/your-org/react-native-atomic-ui)
-- [npm Package](https://www.npmjs.com/package/@react-native-atomic-ui/core)
+- [npm Package](https://www.npmjs.com/package/react-native-atomic-ui)
 - [Issue Tracker](https://github.com/your-org/react-native-atomic-ui/issues)

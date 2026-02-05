@@ -8,7 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
-- Initial release of @react-native-atomic-ui/core v1.0.0
+- Initial release of react-native-atomic-ui v1.0.0
 - 30+ core UI components (zero external dependencies)
 - Context-based theme system with light/dark mode support
 - System preference detection for automatic theme selection
@@ -41,7 +41,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Initial Release
 
-The first stable release of @react-native-atomic-ui/core, a zero-dependency React Native UI component library featuring:
+The first stable release of react-native-atomic-ui, a zero-dependency React Native UI component library featuring:
 
 #### Core Components
 - Layout: Box, Row, Column, Collapsible
@@ -118,11 +118,11 @@ v1.0 introduces major improvements and some breaking changes:
 3. Update imports:
    ```typescript
    // Before (if using Redux)
-   import { useThemeWithRedux } from '@react-native-atomic-ui/core';
+   import { useThemeWithRedux } from 'react-native-atomic-ui';
    const { theme } = useThemeWithRedux();
 
    // After (use app's Redux)
-   import { useTheme } from '@react-native-atomic-ui/core';
+   import { useTheme } from 'react-native-atomic-ui';
    const { theme } = useTheme();
    ```
 
@@ -131,13 +131,13 @@ v1.0 introduces major improvements and some breaking changes:
 ## Installation
 
 ```bash
-npm install @react-native-atomic-ui/core
+npm install react-native-atomic-ui
 ```
 
 ## Links
 
 - [GitHub](https://github.com/your-org/react-native-atomic-ui)
-- [npm](https://www.npmjs.com/package/@react-native-atomic-ui/core)
+- [npm](https://www.npmjs.com/package/react-native-atomic-ui)
 - [Documentation](https://github.com/your-org/react-native-atomic-ui#readme)
 
 ---

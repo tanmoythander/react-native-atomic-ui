@@ -1,4 +1,4 @@
-# Testing Instructions for @react-native-atomic-ui/core
+# Testing Instructions for react-native-atomic-ui
 
 ## Table of Contents
 
@@ -416,7 +416,7 @@ import {
   Button,
   H1,
   Body1,
-} from '@react-native-atomic-ui/core';
+} from 'react-native-atomic-ui';
 
 export function AppExample() {
   const { isDark, toggleTheme, theme } = useTheme();
@@ -561,7 +561,7 @@ npm run build:bundle
 npm publish
 
 # Verify on npm
-npm view @react-native-atomic-ui/core
+npm view react-native-atomic-ui
 ```
 
 ---

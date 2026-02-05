@@ -6,7 +6,7 @@
  * npm install @react-native-documents/picker
  *
  * Usage:
- * import { FilePicker } from '@react-native-atomic-ui/core/file-picker';
+ * import { FilePicker } from 'react-native-atomic-ui/file-picker';
  */
 
 export interface FilePickerProps {
