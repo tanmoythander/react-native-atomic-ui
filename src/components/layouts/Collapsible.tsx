@@ -6,6 +6,7 @@ import {
   LayoutAnimation,
   Platform,
   UIManager,
+  StyleSheet,
 } from 'react-native';
 import { useTheme } from '../../theme/index';
 import type { CollapsibleProps } from '../../types/index';
@@ -36,11 +37,10 @@ export function Collapsible({
   return (
     <View
       style={[
+        styles.wrapper,
         {
-          borderWidth: 1,
           borderColor: theme.colors.border,
           borderRadius: theme.borderRadius.md,
-          overflow: 'hidden',
         },
         style,
       ]}
@@ -49,15 +49,15 @@ export function Collapsible({
       <TouchableOpacity
         activeOpacity={0.7}
         onPress={toggleExpanded}
-        style={{
-          flexDirection: 'row',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-          padding: theme.spacing.md,
-          backgroundColor: theme.colors.surface,
-        }}
+        style={[
+          styles.header,
+          {
+            padding: theme.spacing.md,
+            backgroundColor: theme.colors.surface,
+          },
+        ]}
       >
-        <RNText style={[theme.typography.body1, { color: theme.colors.text, fontWeight: '600' }]}>
+        <RNText style={[theme.typography.body1, styles.headerText, { color: theme.colors.text }]}>
           {title}
         </RNText>
         <RNText style={[theme.typography.h3, { color: theme.colors.textSecondary }]}>
@@ -66,10 +66,13 @@ export function Collapsible({
       </TouchableOpacity>
       {expanded && (
         <View
-          style={{
-            padding: theme.spacing.md,
-            backgroundColor: theme.colors.background,
-          }}
+          style={[
+            styles.content,
+            {
+              padding: theme.spacing.md,
+              backgroundColor: theme.colors.background,
+            },
+          ]}
         >
           {children}
         </View>
@@ -77,3 +80,19 @@ export function Collapsible({
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  wrapper: {
+    borderWidth: 1,
+    overflow: 'hidden',
+  },
+  header: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  headerText: {
+    fontWeight: '600',
+  },
+  content: {},
+});

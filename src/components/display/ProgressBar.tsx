@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import { useTheme } from '../../theme/index';
 import type { ProgressBarProps } from '../../types/index';
 
@@ -23,23 +23,34 @@ export function ProgressBar({
   return (
     <View
       style={[
+        styles.track,
         {
           height,
           backgroundColor: backgroundColor || theme.colors.border,
           borderRadius: theme.borderRadius[borderRadius],
-          overflow: 'hidden',
         },
         style,
       ]}
       testID={testID}
     >
       <View
-        style={{
-          height: '100%',
-          width: `${clampedProgress * 100}%`,
-          backgroundColor: color || theme.colors.primary,
-        }}
+        style={[
+          styles.fill,
+          {
+            width: `${clampedProgress * 100}%`,
+            backgroundColor: color || theme.colors.primary,
+          },
+        ]}
       />
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  track: {
+    overflow: 'hidden',
+  },
+  fill: {
+    height: '100%',
+  },
+});

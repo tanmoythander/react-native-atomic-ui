@@ -1,3 +1,5 @@
+import type { ViewStyle, StyleProp } from 'react-native';
+
 /**
  * DatePickerInput - Advanced component for date selection
  * Requires peer dependency: @react-native-community/datetimepicker
@@ -16,7 +18,7 @@ export interface DatePickerInputProps {
   format?: string;
   placeholder?: string;
   disabled?: boolean;
-  style?: any;
+  style?: StyleProp<ViewStyle>;
   testID?: string;
 }
 

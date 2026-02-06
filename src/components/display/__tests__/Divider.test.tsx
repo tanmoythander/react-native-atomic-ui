@@ -3,6 +3,17 @@ import { render } from '@testing-library/react-native';
 import { ThemeProvider } from '../../../theme';
 import { Divider } from '../Divider';
 
+// Helper to flatten style arrays into a single object
+const flattenStyle = (style: unknown): Record<string, unknown> => {
+  if (Array.isArray(style)) {
+    return Object.assign({}, ...style.filter(Boolean).map(flattenStyle));
+  }
+  if (typeof style === 'object' && style !== null) {
+    return style as Record<string, unknown>;
+  }
+  return {};
+};
+
 describe('Divider Component', () => {
   it('renders correctly', () => {
     const { getByTestId } = render(
@@ -21,11 +32,9 @@ describe('Divider Component', () => {
       </ThemeProvider>
     );
 
-    const divider = getByTestId('divider');
-    expect(divider.props.style).toMatchObject({
-      width: '100%',
-      height: 1,
-    });
+    const style = flattenStyle(getByTestId('divider').props.style);
+    expect(style.width).toBe('100%');
+    expect(style.height).toBe(1);
   });
 
   it('renders vertical orientation', () => {
@@ -35,11 +44,9 @@ describe('Divider Component', () => {
       </ThemeProvider>
     );
 
-    const divider = getByTestId('divider');
-    expect(divider.props.style).toMatchObject({
-      width: 1,
-      height: '100%',
-    });
+    const style = flattenStyle(getByTestId('divider').props.style);
+    expect(style.width).toBe(1);
+    expect(style.height).toBe('100%');
   });
 
   it('applies custom thickness', () => {
@@ -49,10 +56,8 @@ describe('Divider Component', () => {
       </ThemeProvider>
     );
 
-    const divider = getByTestId('divider');
-    expect(divider.props.style).toMatchObject({
-      height: 2,
-    });
+    const style = flattenStyle(getByTestId('divider').props.style);
+    expect(style.height).toBe(2);
   });
 
   it('applies custom color', () => {
@@ -62,9 +67,7 @@ describe('Divider Component', () => {
       </ThemeProvider>
     );
 
-    const divider = getByTestId('divider');
-    expect(divider.props.style).toMatchObject({
-      backgroundColor: '#FF0000',
-    });
+    const style = flattenStyle(getByTestId('divider').props.style);
+    expect(style.backgroundColor).toBe('#FF0000');
   });
 });

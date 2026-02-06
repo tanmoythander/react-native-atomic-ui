@@ -7,12 +7,7 @@ describe('RadioButton Component', () => {
   it('renders correctly', () => {
     const { getByTestId } = render(
       <ThemeProvider>
-        <RadioButton
-          value={'option1'}
-          selected={''}
-          onSelect={() => {}}
-          testID={'radio'}
-        />
+        <RadioButton value={'option1'} selected={''} onSelect={() => {}} testID={'radio'} />
       </ThemeProvider>
     );
 
@@ -22,12 +17,7 @@ describe('RadioButton Component', () => {
   it('renders label when provided', () => {
     const { getByText } = render(
       <ThemeProvider>
-        <RadioButton
-          value={'option1'}
-          selected={''}
-          onSelect={() => {}}
-          label={'Option 1'}
-        />
+        <RadioButton value={'option1'} selected={''} onSelect={() => {}} label={'Option 1'} />
       </ThemeProvider>
     );
 
@@ -38,12 +28,7 @@ describe('RadioButton Component', () => {
     const onSelectMock = jest.fn();
     const { getByTestId } = render(
       <ThemeProvider>
-        <RadioButton
-          value={'option1'}
-          selected={''}
-          onSelect={onSelectMock}
-          testID={'radio'}
-        />
+        <RadioButton value={'option1'} selected={''} onSelect={onSelectMock} testID={'radio'} />
       </ThemeProvider>
     );
 
@@ -72,12 +57,7 @@ describe('RadioButton Component', () => {
   it('shows selected state when value matches selected', () => {
     const { getByTestId } = render(
       <ThemeProvider>
-        <RadioButton
-          value={'option1'}
-          selected={'option1'}
-          onSelect={() => {}}
-          testID={'radio'}
-        />
+        <RadioButton value={'option1'} selected={'option1'} onSelect={() => {}} testID={'radio'} />
       </ThemeProvider>
     );
 
@@ -88,12 +68,7 @@ describe('RadioButton Component', () => {
   it('shows unselected state when value does not match selected', () => {
     const { getByTestId } = render(
       <ThemeProvider>
-        <RadioButton
-          value={'option1'}
-          selected={'option2'}
-          onSelect={() => {}}
-          testID={'radio'}
-        />
+        <RadioButton value={'option1'} selected={'option2'} onSelect={() => {}} testID={'radio'} />
       </ThemeProvider>
     );
 

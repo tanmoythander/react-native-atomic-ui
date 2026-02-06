@@ -1,7 +1,21 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
 import { ThemeProvider } from '../../../theme';
-import { Text, H1, H2, H3, H4, H5, H6, Body1, Body2, SubTitle1, SubTitle2, Caption, Overline } from '../Text';
+import {
+  Text,
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  H6,
+  Body1,
+  Body2,
+  SubTitle1,
+  SubTitle2,
+  Caption,
+  Overline,
+} from '../Text';
 
 describe('Text Component', () => {
   it('renders children correctly', () => {
@@ -34,9 +48,11 @@ describe('Text Component', () => {
     );
 
     const text = getByTestId('text');
-    expect(text.props.style).toMatchObject({
-      color: '#FF0000',
-    });
+    const flatStyle = [].concat(...[text.props.style].flat().filter(Boolean));
+    const colorStyle = flatStyle.find(
+      (s: Record<string, unknown>) => typeof s === 'object' && s.color === '#FF0000'
+    );
+    expect(colorStyle).toBeTruthy();
   });
 
   it('applies text alignment', () => {
@@ -49,9 +65,11 @@ describe('Text Component', () => {
     );
 
     const text = getByTestId('text');
-    expect(text.props.style).toMatchObject({
-      textAlign: 'center',
-    });
+    const flatStyle = [].concat(...[text.props.style].flat().filter(Boolean));
+    const alignStyle = flatStyle.find(
+      (s: Record<string, unknown>) => typeof s === 'object' && s.textAlign === 'center'
+    );
+    expect(alignStyle).toBeTruthy();
   });
 
   it('applies testID correctly', () => {

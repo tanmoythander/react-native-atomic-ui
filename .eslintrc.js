@@ -18,6 +18,8 @@ module.exports = {
     'react-native/split-platform-components': 'warn',
     // Enforce curly braces for all JSX prop values
     'react/jsx-curly-brace-presence': ['error', { props: 'always', children: 'ignore' }],
+    // Align with prettier's trailingComma: 'es5'
+    'comma-dangle': ['warn', 'only-multiline'],
   },
   settings: {
     'import/resolver': {

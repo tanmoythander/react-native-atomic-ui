@@ -3,6 +3,17 @@ import { render } from '@testing-library/react-native';
 import { ThemeProvider } from '../../../theme';
 import { ProgressBar } from '../ProgressBar';
 
+// Helper to flatten style arrays into a single object
+const flattenStyle = (style: unknown): Record<string, unknown> => {
+  if (Array.isArray(style)) {
+    return Object.assign({}, ...style.filter(Boolean).map(flattenStyle));
+  }
+  if (typeof style === 'object' && style !== null) {
+    return style as Record<string, unknown>;
+  }
+  return {};
+};
+
 describe('ProgressBar Component', () => {
   it('renders correctly', () => {
     const { getByTestId } = render(
@@ -52,10 +63,8 @@ describe('ProgressBar Component', () => {
       </ThemeProvider>
     );
 
-    const progressBar = getByTestId('progress');
-    expect(progressBar.props.style).toMatchObject({
-      height: 10,
-    });
+    const style = flattenStyle(getByTestId('progress').props.style);
+    expect(style.height).toBe(10);
   });
 
   it('applies custom color', () => {
@@ -75,6 +84,7 @@ describe('ProgressBar Component', () => {
       </ThemeProvider>
     );
 
-    expect(getByTestId('progress')).toBeTruthy();
+    const style = flattenStyle(getByTestId('progress').props.style);
+    expect(style.backgroundColor).toBe('#CCCCCC');
   });
 });

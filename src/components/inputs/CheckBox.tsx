@@ -28,7 +28,6 @@ export function CheckBox({
         style={[
           styles.checkbox,
           {
-            borderWidth: 2,
             borderColor: disabled
               ? theme.colors.disabled
               : value
@@ -40,8 +39,6 @@ export function CheckBox({
                 ? theme.colors.primary
                 : 'transparent',
             borderRadius: theme.borderRadius.xs,
-            width: 24,
-            height: 24,
           },
         ]}
       >
@@ -72,6 +69,9 @@ const styles = StyleSheet.create({
   checkbox: {
     justifyContent: 'center',
     alignItems: 'center',
+    borderWidth: 2,
+    width: 24,
+    height: 24,
   },
   checkmark: {
     fontSize: 16,

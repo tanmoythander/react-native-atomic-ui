@@ -1,3 +1,5 @@
+import type { ViewStyle, StyleProp } from 'react-native';
+
 /**
  * FilePicker - Advanced component for file selection
  * Requires peer dependency: @react-native-documents/picker
@@ -9,13 +11,20 @@
  * import { FilePicker } from 'react-native-atomic-ui/file-picker';
  */
 
+export interface SelectedFile {
+  uri: string;
+  name: string;
+  type: string;
+  size: number;
+}
+
 export interface FilePickerProps {
-  onFileSelected: (file: any) => void;
+  onFileSelected: (file: SelectedFile) => void;
   multiple?: boolean;
   type?: string;
   label?: string;
   disabled?: boolean;
-  style?: any;
+  style?: StyleProp<ViewStyle>;
   testID?: string;
 }
 

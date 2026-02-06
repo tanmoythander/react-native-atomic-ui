@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text as RNText } from 'react-native';
+import { View, Text as RNText, StyleSheet } from 'react-native';
 import { useTheme } from '../../theme/index';
 import type { BadgeProps } from '../../types/index';
 
@@ -45,10 +45,10 @@ export function Badge({
   return (
     <View
       style={[
+        styles.badge,
         {
           backgroundColor: variantColors[variant],
           borderRadius: theme.borderRadius.full,
-          alignSelf: 'flex-start',
           ...sizeStyles[size],
         },
         style,
@@ -56,14 +56,25 @@ export function Badge({
       testID={testID}
     >
       <RNText
-        style={{
-          color: theme.colors.white,
-          fontSize: sizeStyles[size].fontSize,
-          fontWeight: '600',
-        }}
+        style={[
+          styles.text,
+          {
+            color: theme.colors.white,
+            fontSize: sizeStyles[size].fontSize,
+          },
+        ]}
       >
         {children}
       </RNText>
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  badge: {
+    alignSelf: 'flex-start',
+  },
+  text: {
+    fontWeight: '600',
+  },
+});

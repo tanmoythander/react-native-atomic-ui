@@ -1,3 +1,5 @@
+import type { ViewStyle, StyleProp } from 'react-native';
+
 /**
  * Picker Components - Advanced dropdowns and selection
  * Requires peer dependency: react-native-picker-select
@@ -21,7 +23,7 @@ export interface PickerInputProps {
   label?: string;
   placeholder?: string;
   disabled?: boolean;
-  style?: any;
+  style?: StyleProp<ViewStyle>;
   testID?: string;
 }
 

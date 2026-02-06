@@ -50,8 +50,8 @@ export function Input({
         testID={testID}
         style={[
           theme.typography.body1,
+          styles.input,
           {
-            borderWidth: 1,
             borderColor: error ? theme.colors.error : theme.colors.border,
             borderRadius: theme.borderRadius.sm,
             padding: theme.spacing.md,
@@ -78,5 +78,8 @@ export function Input({
 const styles = StyleSheet.create({
   container: {
     width: '100%',
+  },
+  input: {
+    borderWidth: 1,
   },
 });

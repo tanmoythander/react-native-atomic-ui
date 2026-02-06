@@ -43,7 +43,7 @@ describe('Collapsible Component', () => {
 
     // Click to expand
     fireEvent.press(getByText('Test Title'));
-    
+
     // Content should be visible (though animation may affect immediate visibility)
     // Note: In a real test, you might need to wait for animations
   });

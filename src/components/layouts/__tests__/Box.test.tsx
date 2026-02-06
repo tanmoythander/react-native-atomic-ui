@@ -4,6 +4,17 @@ import { ThemeProvider } from '../../../theme';
 import { Box, Row, Column } from '../Box';
 import { Text } from '../../typography/Text';
 
+// Helper to flatten style arrays into a single object
+const flattenStyle = (style: unknown): Record<string, unknown> => {
+  if (Array.isArray(style)) {
+    return Object.assign({}, ...style.filter(Boolean).map(flattenStyle));
+  }
+  if (typeof style === 'object' && style !== null) {
+    return style as Record<string, unknown>;
+  }
+  return {};
+};
+
 describe('Box Component', () => {
   it('renders children correctly', () => {
     const { getByText } = render(
@@ -26,10 +37,8 @@ describe('Box Component', () => {
       </ThemeProvider>
     );
 
-    const box = getByTestId('box');
-    expect(box.props.style).toMatchObject({
-      padding: 24,
-    });
+    const style = flattenStyle(getByTestId('box').props.style);
+    expect(style.padding).toBe(24);
   });
 
   it('applies gap correctly', () => {
@@ -41,10 +50,8 @@ describe('Box Component', () => {
       </ThemeProvider>
     );
 
-    const box = getByTestId('box');
-    expect(box.props.style).toMatchObject({
-      gap: 16,
-    });
+    const style = flattenStyle(getByTestId('box').props.style);
+    expect(style.gap).toBe(16);
   });
 
   it('applies backgroundColor correctly', () => {
@@ -56,10 +63,8 @@ describe('Box Component', () => {
       </ThemeProvider>
     );
 
-    const box = getByTestId('box');
-    expect(box.props.style).toMatchObject({
-      backgroundColor: '#FF0000',
-    });
+    const style = flattenStyle(getByTestId('box').props.style);
+    expect(style.backgroundColor).toBe('#FF0000');
   });
 
   it('applies flex layout props correctly', () => {
@@ -77,13 +82,11 @@ describe('Box Component', () => {
       </ThemeProvider>
     );
 
-    const box = getByTestId('box');
-    expect(box.props.style).toMatchObject({
-      flex: 1,
-      flexDirection: 'row',
-      alignItems: 'center',
-      justifyContent: 'space-between',
-    });
+    const style = flattenStyle(getByTestId('box').props.style);
+    expect(style.flex).toBe(1);
+    expect(style.flexDirection).toBe('row');
+    expect(style.alignItems).toBe('center');
+    expect(style.justifyContent).toBe('space-between');
   });
 
   it('applies width and height correctly', () => {
@@ -95,11 +98,9 @@ describe('Box Component', () => {
       </ThemeProvider>
     );
 
-    const box = getByTestId('box');
-    expect(box.props.style).toMatchObject({
-      width: 200,
-      height: 100,
-    });
+    const style = flattenStyle(getByTestId('box').props.style);
+    expect(style.width).toBe(200);
+    expect(style.height).toBe(100);
   });
 });
 
@@ -113,11 +114,9 @@ describe('Row Component', () => {
       </ThemeProvider>
     );
 
-    const row = getByTestId('row');
-    expect(row.props.style).toMatchObject({
-      flexDirection: 'row',
-      alignItems: 'center',
-    });
+    const style = flattenStyle(getByTestId('row').props.style);
+    expect(style.flexDirection).toBe('row');
+    expect(style.alignItems).toBe('center');
   });
 
   it('applies gap correctly', () => {
@@ -129,11 +128,9 @@ describe('Row Component', () => {
       </ThemeProvider>
     );
 
-    const row = getByTestId('row');
-    expect(row.props.style).toMatchObject({
-      gap: 8,
-      flexDirection: 'row',
-    });
+    const style = flattenStyle(getByTestId('row').props.style);
+    expect(style.gap).toBe(8);
+    expect(style.flexDirection).toBe('row');
   });
 });
 
@@ -147,10 +144,8 @@ describe('Column Component', () => {
       </ThemeProvider>
     );
 
-    const column = getByTestId('column');
-    expect(column.props.style).toMatchObject({
-      flexDirection: 'column',
-    });
+    const style = flattenStyle(getByTestId('column').props.style);
+    expect(style.flexDirection).toBe('column');
   });
 
   it('applies gap correctly', () => {
@@ -162,10 +157,8 @@ describe('Column Component', () => {
       </ThemeProvider>
     );
 
-    const column = getByTestId('column');
-    expect(column.props.style).toMatchObject({
-      gap: 24,
-      flexDirection: 'column',
-    });
+    const style = flattenStyle(getByTestId('column').props.style);
+    expect(style.gap).toBe(24);
+    expect(style.flexDirection).toBe('column');
   });
 });

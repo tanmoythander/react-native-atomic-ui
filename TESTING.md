@@ -99,6 +99,8 @@ Tests are co-located with their components:
 ```
 src/
 ├── components/
+│   ├── __tests__/
+│   │   └── snapshots.test.tsx      # Snapshot tests for all components
 │   ├── layouts/
 │   │   ├── __tests__/
 │   │   │   ├── Box.test.tsx
@@ -283,6 +285,33 @@ expect(element.props.disabled).toBe(true);
 expect(mockFn).toHaveBeenCalledTimes(1);
 expect(mockFn).toHaveBeenCalledWith('value');
 ```
+
+---
+
+## Snapshot Tests
+
+Snapshot tests ensure consistent UI rendering across changes. They are located in `src/components/__tests__/snapshots.test.tsx` and cover all components.
+
+### Running Snapshot Tests
+
+```bash
+# Run snapshot tests
+npm test -- snapshots.test.tsx
+
+# Update snapshots after intentional changes
+npm test -- -u
+```
+
+### What Snapshot Tests Cover
+
+- Layout components (Box, Row, Column, Collapsible)
+- Input components (Button, Input, CheckBox, RadioButton, Switch)
+- Display components (Badge, Divider, ProgressBar)
+- Typography components (Text, H1-H3, Body1-2, SubTitle1, Caption, Overline)
+
+### When to Update Snapshots
+
+Update snapshots when you intentionally change a component's rendered output (e.g., style changes, structural changes). Always review snapshot diffs to verify changes are expected.
 
 ---
 

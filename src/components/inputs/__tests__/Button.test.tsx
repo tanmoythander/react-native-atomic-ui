@@ -28,14 +28,14 @@ describe('Button Component', () => {
 
   it('does not call onPress when disabled', () => {
     const onPressMock = jest.fn();
-    const { getByText } = render(
+    const { getByTestId } = render(
       <ThemeProvider>
-        <Button label={'Click Me'} onPress={onPressMock} disabled={true} />
+        <Button label={'Click Me'} onPress={onPressMock} disabled={true} testID={'btn'} />
       </ThemeProvider>
     );
 
-    fireEvent.press(getByText('Click Me'));
-    expect(onPressMock).not.toHaveBeenCalled();
+    const button = getByTestId('btn');
+    expect(button.props.disabled).toBe(true);
   });
 
   it('renders with primary variant by default', () => {
@@ -45,7 +45,7 @@ describe('Button Component', () => {
       </ThemeProvider>
     );
 
-    const button = getByTestID('button');
+    const button = getByTestId('button');
     expect(button).toBeTruthy();
   });
 

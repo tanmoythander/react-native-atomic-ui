@@ -30,15 +30,11 @@ export function RadioButton({
         style={[
           styles.radio,
           {
-            borderWidth: 2,
             borderColor: disabled
               ? theme.colors.disabled
               : isSelected
                 ? theme.colors.primary
                 : theme.colors.border,
-            width: 24,
-            height: 24,
-            borderRadius: 12,
           },
         ]}
       >
@@ -48,9 +44,6 @@ export function RadioButton({
               styles.radioInner,
               {
                 backgroundColor: disabled ? theme.colors.disabled : theme.colors.primary,
-                width: 12,
-                height: 12,
-                borderRadius: 6,
               },
             ]}
           />
@@ -81,6 +74,14 @@ const styles = StyleSheet.create({
   radio: {
     justifyContent: 'center',
     alignItems: 'center',
+    borderWidth: 2,
+    width: 24,
+    height: 24,
+    borderRadius: 12,
   },
-  radioInner: {},
+  radioInner: {
+    width: 12,
+    height: 12,
+    borderRadius: 6,
+  },
 });

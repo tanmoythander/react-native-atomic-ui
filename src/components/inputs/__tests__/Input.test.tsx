@@ -81,12 +81,7 @@ describe('Input Component', () => {
   it('applies keyboard type correctly', () => {
     const { getByTestId } = render(
       <ThemeProvider>
-        <Input
-          value={''}
-          onChangeText={() => {}}
-          keyboardType={'email-address'}
-          testID={'input'}
-        />
+        <Input value={''} onChangeText={() => {}} keyboardType={'email-address'} testID={'input'} />
       </ThemeProvider>
     );
 
