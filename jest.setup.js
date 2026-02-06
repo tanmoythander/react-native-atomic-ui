@@ -1,4 +1,6 @@
 // Jest setup file
+require('@testing-library/jest-native/extend-expect');
+
 global.console = {
   ...console,
   // Keep warnings visible, suppress logs
