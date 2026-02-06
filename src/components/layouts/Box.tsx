@@ -9,6 +9,11 @@ import type { BoxProps } from '../../types/index';
  */
 export function Box({
   children,
+  flex,
+  flexDirection,
+  alignItems,
+  justifyContent,
+  flexWrap,
   padding,
   paddingHorizontal,
   paddingVertical,
@@ -18,12 +23,21 @@ export function Box({
   gap,
   backgroundColor,
   borderRadius,
+  width,
+  height,
   style,
   testID,
 }: BoxProps) {
   const { theme } = useTheme();
 
   const boxStyle: ViewProps['style'] = [
+    flex !== undefined && { flex },
+    flexDirection && { flexDirection },
+    alignItems && { alignItems },
+    justifyContent && { justifyContent },
+    flexWrap && { flexWrap },
+    width !== undefined && { width },
+    height !== undefined && { height },
     padding && { padding: theme.spacing[padding] },
     paddingHorizontal && { paddingHorizontal: theme.spacing[paddingHorizontal] },
     paddingVertical && { paddingVertical: theme.spacing[paddingVertical] },
@@ -49,6 +63,10 @@ export function Box({
  */
 export function Row({
   children,
+  flex,
+  alignItems = 'center',
+  justifyContent,
+  flexWrap,
   padding,
   paddingHorizontal,
   paddingVertical,
@@ -58,13 +76,21 @@ export function Row({
   gap,
   backgroundColor,
   borderRadius,
+  width,
+  height,
   style,
   testID,
 }: BoxProps) {
   const { theme } = useTheme();
 
   const rowStyle: ViewProps['style'] = [
-    { flexDirection: 'row', alignItems: 'center' },
+    { flexDirection: 'row' },
+    flex !== undefined && { flex },
+    alignItems && { alignItems },
+    justifyContent && { justifyContent },
+    flexWrap && { flexWrap },
+    width !== undefined && { width },
+    height !== undefined && { height },
     padding && { padding: theme.spacing[padding] },
     paddingHorizontal && { paddingHorizontal: theme.spacing[paddingHorizontal] },
     paddingVertical && { paddingVertical: theme.spacing[paddingVertical] },
@@ -90,6 +116,10 @@ export function Row({
  */
 export function Column({
   children,
+  flex,
+  alignItems,
+  justifyContent,
+  flexWrap,
   padding,
   paddingHorizontal,
   paddingVertical,
@@ -99,6 +129,8 @@ export function Column({
   gap,
   backgroundColor,
   borderRadius,
+  width,
+  height,
   style,
   testID,
 }: BoxProps) {
@@ -106,6 +138,12 @@ export function Column({
 
   const columnStyle: ViewProps['style'] = [
     { flexDirection: 'column' },
+    flex !== undefined && { flex },
+    alignItems && { alignItems },
+    justifyContent && { justifyContent },
+    flexWrap && { flexWrap },
+    width !== undefined && { width },
+    height !== undefined && { height },
     padding && { padding: theme.spacing[padding] },
     paddingHorizontal && { paddingHorizontal: theme.spacing[paddingHorizontal] },
     paddingVertical && { paddingVertical: theme.spacing[paddingVertical] },

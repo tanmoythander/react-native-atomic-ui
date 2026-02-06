@@ -1,7 +1,7 @@
 module.exports = {
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   testEnvironment: 'node',
-  testPathIgnorePatterns: ['/node_modules/', '/dist/'],
+  testPathIgnorePatterns: ['/node_modules/', '/dist/', '/examples/'],
   moduleNameMapper: {
     '@components/(.*)': '<rootDir>/src/components/$1',
     '@theme/(.*)': '<rootDir>/src/theme/$1',

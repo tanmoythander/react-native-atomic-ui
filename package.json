@@ -1,6 +1,6 @@
 {
   "name": "react-native-atomic-ui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Zero-dependency atomic UI components library for React Native with built-in dark mode support",
   "main": "dist/index.js",
   "module": "dist/index.mjs",

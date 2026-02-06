@@ -79,6 +79,17 @@ export interface ThemeContextValue {
 // Component prop types
 export interface BoxProps {
   children?: React.ReactNode;
+  flex?: number;
+  flexDirection?: 'row' | 'column' | 'row-reverse' | 'column-reverse';
+  alignItems?: 'flex-start' | 'flex-end' | 'center' | 'stretch' | 'baseline';
+  justifyContent?:
+    | 'flex-start'
+    | 'flex-end'
+    | 'center'
+    | 'space-between'
+    | 'space-around'
+    | 'space-evenly';
+  flexWrap?: 'wrap' | 'nowrap' | 'wrap-reverse';
   padding?: keyof Theme['spacing'];
   paddingHorizontal?: keyof Theme['spacing'];
   paddingVertical?: keyof Theme['spacing'];
@@ -88,6 +99,8 @@ export interface BoxProps {
   gap?: keyof Theme['spacing'];
   backgroundColor?: string;
   borderRadius?: keyof Theme['borderRadius'];
+  width?: number | string;
+  height?: number | string;
   style?: any;
   testID?: string;
 }

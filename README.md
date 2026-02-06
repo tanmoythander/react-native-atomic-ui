@@ -51,9 +51,19 @@
 ### Basic Setup
 
 ```bash
-npm install react-native-atomic-ui react-native
+npm install react-native-atomic-ui
 # or
-yarn add react-native-atomic-ui react-native
+yarn add react-native-atomic-ui
+```
+
+**Note:** `react` and `react-native` are peer dependencies and should already be installed in your React Native project.
+
+### iOS Additional Setup
+
+After installation, if you're on iOS, install pods:
+
+```bash
+cd ios && pod install && cd ..
 ```
 
 ## 📱 Example App
@@ -92,9 +102,15 @@ npm install @react-native-community/netinfo
 
 ## 🔧 Quick Start
 
-### Setup Theme Provider
+### 1. Install the Package
 
-Wrap your app with `ThemeProvider` at the root level:
+```bash
+npm install react-native-atomic-ui
+```
+
+### 2. Setup Theme Provider
+
+Wrap your app with `ThemeProvider` at the root level (usually in `index.js` or `App.tsx`):
 
 ```typescript
 import React from 'react';
@@ -110,7 +126,7 @@ export function Root() {
 }
 ```
 
-### Using Components
+### 3. Start Using Components
 
 ```typescript
 import React from 'react';
@@ -494,6 +510,6 @@ Contributions are welcome! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for g
 
 ## 🔗 Links
 
-- [GitHub Repository](https://github.com/your-org/react-native-atomic-ui)
+- [GitHub Repository](https://github.com/tanmoythander/react-native-atomic-ui)
 - [npm Package](https://www.npmjs.com/package/react-native-atomic-ui)
-- [Issue Tracker](https://github.com/your-org/react-native-atomic-ui/issues)
+- [Issue Tracker](https://github.com/tanmoythander/react-native-atomic-ui/issues)
