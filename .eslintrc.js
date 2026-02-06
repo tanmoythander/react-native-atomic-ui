@@ -1,7 +1,7 @@
 module.exports = {
   root: true,
   extends: ['@react-native/eslint-config'],
-  plugins: ['@typescript-eslint'],
+  plugins: ['@typescript-eslint', 'react'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 2020,
@@ -16,6 +16,8 @@ module.exports = {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'react-native/no-unused-styles': 'warn',
     'react-native/split-platform-components': 'warn',
+    // Enforce curly braces for all JSX prop values
+    'react/jsx-curly-brace-presence': ['error', { props: 'always', children: 'ignore' }],
   },
   settings: {
     'import/resolver': {

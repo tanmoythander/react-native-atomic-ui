@@ -30,13 +30,13 @@ export interface PickerInputProps {
 export function BorderedPickerInput() {
   throw new Error(
     'BorderedPickerInput requires peer dependency: react-native-picker-select\n' +
-    'Install it with: npm install react-native-picker-select'
+      'Install it with: npm install react-native-picker-select'
   );
 }
 
 export function PickerModal() {
   throw new Error(
     'PickerModal requires peer dependency: react-native-picker-select\n' +
-    'Install it with: npm install react-native-picker-select'
+      'Install it with: npm install react-native-picker-select'
   );
 }

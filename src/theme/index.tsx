@@ -14,10 +14,7 @@ export interface ThemeProviderProps {
  * Context-based Theme Provider
  * Provides theme context without requiring Redux
  */
-export function ThemeProvider({
-  children,
-  defaultTheme = 'system',
-}: ThemeProviderProps) {
+export function ThemeProvider({ children, defaultTheme = 'system' }: ThemeProviderProps) {
   const systemColorScheme = useColorScheme();
   const isSystemDark = systemColorScheme === 'dark';
 
@@ -47,9 +44,7 @@ export function ThemeProvider({
     toggleTheme,
   };
 
-  return (
-    <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>
-  );
+  return <ThemeContext.Provider value={value}>{children}</ThemeContext.Provider>;
 }
 
 /**

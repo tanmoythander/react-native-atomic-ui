@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  TouchableOpacity,
-  View,
-  StyleSheet,
-  ActivityIndicator,
-} from 'react-native';
+import { TouchableOpacity, View, StyleSheet, ActivityIndicator } from 'react-native';
 import { useTheme } from '@theme/index';
 import type { ButtonProps } from '../../types/index';
 import { Text } from '../typography/Text';
@@ -104,10 +99,7 @@ export function Button({
     >
       <View style={styles.content}>
         {loading ? (
-          <ActivityIndicator
-            color={textColor}
-            size={size === 'small' ? 'small' : 'large'}
-          />
+          <ActivityIndicator color={textColor} size={size === 'small' ? 'small' : 'large'} />
         ) : (
           <>
             {icon && <View style={styles.icon}>{icon}</View>}

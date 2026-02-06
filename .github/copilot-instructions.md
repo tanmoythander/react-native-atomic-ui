@@ -171,6 +171,7 @@ All components:
 2. Should accept `style?` prop for overrides
 3. Should accept `testID?` prop for testing
 4. Should NOT use `any` type (ESLint warns on this)
+5. **String prop values MUST use curly braces with single quotes**: `variant={'primary'}` not `variant="primary"`
 
 Example structure:
 ```typescript
@@ -178,6 +179,11 @@ export function Button(props: ButtonProps) {
   const { theme } = useTheme();
   // ... component logic
 }
+
+// Usage - ALWAYS use curly braces for string props
+<Button variant={'primary'} size={'large'} />
+<Box padding={'lg'} borderRadius={'md'} />
+```
 ```
 
 ### Theme Styling Pattern

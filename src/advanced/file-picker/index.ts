@@ -24,6 +24,6 @@ export interface FilePickerProps {
 export function FilePicker() {
   throw new Error(
     'FilePicker requires peer dependency: @react-native-documents/picker\n' +
-    'Install it with: npm install @react-native-documents/picker'
+      'Install it with: npm install @react-native-documents/picker'
   );
 }

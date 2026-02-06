@@ -6,14 +6,7 @@ import type { TextProps } from '../../types/index';
 /**
  * Base Text component with theme support
  */
-export function Text({
-  children,
-  variant = 'body1',
-  color,
-  textAlign,
-  style,
-  testID,
-}: TextProps) {
+export function Text({ children, variant = 'body1', color, textAlign, style, testID }: TextProps) {
   const { theme } = useTheme();
 
   const textStyle: RNTextProps['style'] = [
@@ -35,65 +28,65 @@ export function Text({
  */
 
 export function H1(props: TextProps) {
-  return <Text {...props} variant="h1" />;
+  return <Text {...props} variant={'h1'} />;
 }
 
 export function H2(props: TextProps) {
-  return <Text {...props} variant="h2" />;
+  return <Text {...props} variant={'h2'} />;
 }
 
 export function H3(props: TextProps) {
-  return <Text {...props} variant="h3" />;
+  return <Text {...props} variant={'h3'} />;
 }
 
 export function H4(props: TextProps) {
-  return <Text {...props} variant="h4" />;
+  return <Text {...props} variant={'h4'} />;
 }
 
 export function H5(props: TextProps) {
-  return <Text {...props} variant="h5" />;
+  return <Text {...props} variant={'h5'} />;
 }
 
 export function H6(props: TextProps) {
-  return <Text {...props} variant="h6" />;
+  return <Text {...props} variant={'h6'} />;
 }
 
 export function Body1(props: TextProps) {
-  return <Text {...props} variant="body1" />;
+  return <Text {...props} variant={'body1'} />;
 }
 
 export function Body2(props: TextProps) {
-  return <Text {...props} variant="body2" />;
+  return <Text {...props} variant={'body2'} />;
 }
 
 export function Body3(props: TextProps) {
-  return <Text {...props} variant="body3" />;
+  return <Text {...props} variant={'body3'} />;
 }
 
 export function Body4(props: TextProps) {
-  return <Text {...props} variant="body4" />;
+  return <Text {...props} variant={'body4'} />;
 }
 
 export function Body5(props: TextProps) {
-  return <Text {...props} variant="body5" />;
+  return <Text {...props} variant={'body5'} />;
 }
 
 export function Body6(props: TextProps) {
-  return <Text {...props} variant="body6" />;
+  return <Text {...props} variant={'body6'} />;
 }
 
 export function SubTitle1(props: TextProps) {
-  return <Text {...props} variant="subtitle1" />;
+  return <Text {...props} variant={'subtitle1'} />;
 }
 
 export function SubTitle2(props: TextProps) {
-  return <Text {...props} variant="subtitle2" />;
+  return <Text {...props} variant={'subtitle2'} />;
 }
 
 export function Caption(props: TextProps) {
-  return <Text {...props} variant="caption" />;
+  return <Text {...props} variant={'caption'} />;
 }
 
 export function Overline(props: TextProps) {
-  return <Text {...props} variant="overline" />;
+  return <Text {...props} variant={'overline'} />;
 }

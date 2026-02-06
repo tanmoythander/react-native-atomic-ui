@@ -25,6 +25,6 @@ export interface DatePickerInputProps {
 export function DatePickerInput() {
   throw new Error(
     'DatePickerInput requires peer dependency: @react-native-community/datetimepicker\n' +
-    'Install it with: npm install @react-native-community/datetimepicker'
+      'Install it with: npm install @react-native-community/datetimepicker'
   );
 }

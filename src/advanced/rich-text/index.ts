@@ -32,13 +32,13 @@ export interface RichTextInputProps {
 export function RichText() {
   throw new Error(
     'RichText requires peer dependency: react-native-webview\n' +
-    'Install it with: npm install react-native-webview'
+      'Install it with: npm install react-native-webview'
   );
 }
 
 export function RichTextInput() {
   throw new Error(
     'RichTextInput requires peer dependency: @10play/tentap-editor\n' +
-    'Install it with: npm install github:starburst997/10tap-editor#jd'
+      'Install it with: npm install github:starburst997/10tap-editor#jd'
   );
 }

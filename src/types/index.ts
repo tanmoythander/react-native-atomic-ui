@@ -118,7 +118,23 @@ export interface InputProps {
 
 export interface TextProps {
   children?: React.ReactNode;
-  variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'body1' | 'body2' | 'body3' | 'body4' | 'body5' | 'body6' | 'subtitle1' | 'subtitle2' | 'caption' | 'overline';
+  variant?:
+    | 'h1'
+    | 'h2'
+    | 'h3'
+    | 'h4'
+    | 'h5'
+    | 'h6'
+    | 'body1'
+    | 'body2'
+    | 'body3'
+    | 'body4'
+    | 'body5'
+    | 'body6'
+    | 'subtitle1'
+    | 'subtitle2'
+    | 'caption'
+    | 'overline';
   color?: string;
   textAlign?: 'auto' | 'left' | 'right' | 'center' | 'justify';
   style?: any;

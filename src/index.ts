@@ -1,10 +1,5 @@
 // Core exports
-export {
-  ThemeProvider,
-  useTheme,
-  lightTheme,
-  darkTheme,
-} from './theme/index';
+export { ThemeProvider, useTheme, lightTheme, darkTheme } from './theme/index';
 
 export {
   Box,
