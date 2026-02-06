@@ -1,6 +1,6 @@
 {
   "name": "react-native-atomic-ui",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Zero-dependency atomic UI components library for React Native with built-in dark mode support",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -41,12 +41,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tanmoythander/react-native-atomic-ui-core.git"
+    "url": "git+https://github.com/tanmoythander/react-native-atomic-ui.git"
   },
   "bugs": {
-    "url": "https://github.com/tanmoythander/react-native-atomic-ui-core/issues"
+    "url": "https://github.com/tanmoythander/react-native-atomic-ui/issues"
   },
-  "homepage": "https://github.com/tanmoythander/react-native-atomic-ui-core#readme",
+  "homepage": "https://github.com/tanmoythander/react-native-atomic-ui#readme",
   "peerDependencies": {
     "react": ">=16.8.0",
     "react-native": ">=0.73.0"
