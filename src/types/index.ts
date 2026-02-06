@@ -109,9 +109,73 @@ export interface InputProps {
   onChangeText: (text: string) => void;
   placeholder?: string;
   label?: string;
+  error?: string;
   editable?: boolean;
   secureTextEntry?: boolean;
   keyboardType?: 'default' | 'numeric' | 'email-address' | 'phone-pad';
+  multiline?: boolean;
+  numberOfLines?: number;
+  style?: any;
+  testID?: string;
+}
+
+export interface CheckBoxProps {
+  value: boolean;
+  onValueChange: (value: boolean) => void;
+  label?: string;
+  disabled?: boolean;
+  style?: any;
+  testID?: string;
+}
+
+export interface RadioButtonProps {
+  value: string;
+  selected: string;
+  onSelect: (value: string) => void;
+  label?: string;
+  disabled?: boolean;
+  style?: any;
+  testID?: string;
+}
+
+export interface SwitchProps {
+  value: boolean;
+  onValueChange: (value: boolean) => void;
+  disabled?: boolean;
+  style?: any;
+  testID?: string;
+}
+
+export interface ProgressBarProps {
+  progress: number; // 0-1
+  height?: number;
+  color?: string;
+  backgroundColor?: string;
+  borderRadius?: keyof Theme['borderRadius'];
+  style?: any;
+  testID?: string;
+}
+
+export interface BadgeProps {
+  children: React.ReactNode;
+  variant?: 'primary' | 'secondary' | 'success' | 'error' | 'warning' | 'info';
+  size?: 'small' | 'medium' | 'large';
+  style?: any;
+  testID?: string;
+}
+
+export interface DividerProps {
+  orientation?: 'horizontal' | 'vertical';
+  thickness?: number;
+  color?: string;
+  style?: any;
+  testID?: string;
+}
+
+export interface CollapsibleProps {
+  title: string;
+  children: React.ReactNode;
+  initiallyExpanded?: boolean;
   style?: any;
   testID?: string;
 }
