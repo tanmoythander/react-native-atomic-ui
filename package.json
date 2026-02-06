@@ -88,44 +88,44 @@
   },
   "exports": {
     ".": {
-      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js"
     },
     "./theme": {
-      "require": "./dist/theme/index.js",
+      "types": "./dist/theme/index.d.ts",
       "import": "./dist/theme/index.mjs",
-      "types": "./dist/theme/index.d.ts"
+      "require": "./dist/theme/index.js"
     },
     "./components": {
-      "require": "./dist/components/index.js",
+      "types": "./dist/components/index.d.ts",
       "import": "./dist/components/index.mjs",
-      "types": "./dist/components/index.d.ts"
+      "require": "./dist/components/index.js"
     },
     "./date-picker": {
-      "require": "./dist/advanced/date-picker/index.js",
+      "types": "./dist/advanced/date-picker/index.d.ts",
       "import": "./dist/advanced/date-picker/index.mjs",
-      "types": "./dist/advanced/date-picker/index.d.ts"
+      "require": "./dist/advanced/date-picker/index.js"
     },
     "./picker": {
-      "require": "./dist/advanced/picker/index.js",
+      "types": "./dist/advanced/picker/index.d.ts",
       "import": "./dist/advanced/picker/index.mjs",
-      "types": "./dist/advanced/picker/index.d.ts"
+      "require": "./dist/advanced/picker/index.js"
     },
     "./file-picker": {
-      "require": "./dist/advanced/file-picker/index.js",
+      "types": "./dist/advanced/file-picker/index.d.ts",
       "import": "./dist/advanced/file-picker/index.mjs",
-      "types": "./dist/advanced/file-picker/index.d.ts"
+      "require": "./dist/advanced/file-picker/index.js"
     },
     "./rich-text": {
-      "require": "./dist/advanced/rich-text/index.js",
+      "types": "./dist/advanced/rich-text/index.d.ts",
       "import": "./dist/advanced/rich-text/index.mjs",
-      "types": "./dist/advanced/rich-text/index.d.ts"
+      "require": "./dist/advanced/rich-text/index.js"
     },
     "./advanced": {
-      "require": "./dist/advanced/index.js",
+      "types": "./dist/advanced/index.d.ts",
       "import": "./dist/advanced/index.mjs",
-      "types": "./dist/advanced/index.d.ts"
+      "require": "./dist/advanced/index.js"
     }
   },
   "engines": {
