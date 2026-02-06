@@ -56,6 +56,20 @@ npm install react-native-atomic-ui react-native
 yarn add react-native-atomic-ui react-native
 ```
 
+## 📱 Example App
+
+Want to see all components in action? Check out our comprehensive showcase app:
+
+👉 **[AtomicUIApp Example](examples/app/)** - A complete React Native app demonstrating all components, themes, and features.
+
+To run the example app:
+```bash
+cd examples/app
+npm install
+cd ios && pod install && cd ..
+npx react-native run-ios  # or run-android
+```
+
 ### With Optional Components
 
 ```bash
