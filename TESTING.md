@@ -47,6 +47,8 @@ Main Jest configuration file with:
 
 Jest setup file that:
 - Extends Jest with React Native Testing Library matchers
+- Configures host component names for RNTL v12 compatibility
+- Suppresses react-test-renderer deprecation warnings (transitive dependency)
 - Configures console mocking for cleaner test output
 
 #### `__mocks__/react-native.js`

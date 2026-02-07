@@ -14,9 +14,23 @@ configure({
   },
 });
 
+// Suppress react-test-renderer deprecation warnings from React 19
+// These warnings are from the underlying library dependency and don't affect functionality
+const originalStderrWrite = process.stderr.write.bind(process.stderr);
+process.stderr.write = (chunk, encoding, callback) => {
+  if (
+    typeof chunk === 'string' &&
+    chunk.includes('react-test-renderer is deprecated')
+  ) {
+    return true;
+  }
+  return originalStderrWrite(chunk, encoding, callback);
+};
+
+// Console mocking for cleaner test output
 global.console = {
   ...console,
-  // Keep warnings visible, suppress logs
+  // Keep warnings and errors visible, suppress logs
   log: jest.fn(),
   debug: jest.fn(),
   info: jest.fn(),

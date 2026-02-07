@@ -138,12 +138,13 @@ All component prop types are centralized in `src/types/index.ts`:
 
 ### Testing Setup
 
-- **Framework**: Jest + TypeScript (`ts-jest`)
+- **Framework**: Jest + TypeScript (`ts-jest`) + React Native Testing Library v13
 - **Test environment**: `node` (not React Native environment)
-- **Jest module mapper** duplicates tsconfig path aliases
-- **Coverage threshold**: 80% lines, 75% functions, 70% branches
+- **Mock system**: Comprehensive React Native mock in `__mocks__/react-native.js`
+- **Coverage threshold**: 80% lines, 75% functions, 70% branches, 80% statements
 - **Test location**: `__tests__/` directories or `*.test.ts(x)` files
-- **Note**: Tests currently don't exist - `npm test` exits with code 1 (zero tests found). This is intentional for the MVP.
+- **Current status**: 107 tests passing across 12 suites, 29 snapshot tests, ~88% coverage
+- **Note**: react-test-renderer deprecation warnings are suppressed in jest.setup.js
 
 ## Key Conventions
 
