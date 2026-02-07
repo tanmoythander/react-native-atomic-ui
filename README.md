@@ -250,9 +250,11 @@ export function TypographyExample() {
 
 ## 📚 Component API Reference
 
-### Box
+### Layout Components
 
-Flexible container component for layout.
+#### Box
+
+Flexible container component for layout with theme-aware spacing.
 
 ```typescript
 interface BoxProps {
@@ -266,14 +268,71 @@ interface BoxProps {
   gap?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl';
   backgroundColor?: string;
   borderRadius?: 'xs' | 'sm' | 'md' | 'lg' | 'full';
+  flex?: number;
+  flexDirection?: 'row' | 'column' | 'row-reverse' | 'column-reverse';
+  alignItems?: 'flex-start' | 'flex-end' | 'center' | 'stretch' | 'baseline';
+  justifyContent?: 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around' | 'space-evenly';
+  flexWrap?: 'wrap' | 'nowrap' | 'wrap-reverse';
+  width?: number | string;
+  height?: number | string;
   style?: any;
   testID?: string;
 }
 ```
 
-### Button
+**Example:**
+```typescript
+<Box padding={'lg'} backgroundColor={theme.colors.surface} borderRadius={'md'}>
+  <Text>Content</Text>
+</Box>
+```
 
-Interactive button component with multiple variants.
+#### Row & Column
+
+Flex container components for horizontal and vertical layouts.
+
+```typescript
+// Row = Box with flexDirection='row' and alignItems='center' by default
+<Row gap={'md'} padding={'lg'}>
+  {/* Horizontal layout */}
+</Row>
+
+// Column = Box with flexDirection='column'
+<Column gap={'md'} padding={'lg'}>
+  {/* Vertical layout */}
+</Column>
+```
+
+Both components accept all `BoxProps`.
+
+#### Collapsible
+
+Expandable/collapsible section with animated transitions.
+
+```typescript
+interface CollapsibleProps {
+  title: string;
+  children: React.ReactNode;
+  initiallyExpanded?: boolean;
+  style?: any;
+  testID?: string;
+}
+```
+
+**Example:**
+```typescript
+<Collapsible title={'Advanced Settings'} initiallyExpanded={false}>
+  <Text>Hidden content that can be toggled</Text>
+</Collapsible>
+```
+
+---
+
+### Input Components
+
+#### Button
+
+Interactive button component with multiple variants and sizes.
 
 ```typescript
 interface ButtonProps {
@@ -300,14 +359,222 @@ interface ButtonProps {
 - `medium` - 48px height (default)
 - `large` - 56px height
 
-### Text
+**Example:**
+```typescript
+<Button
+  label={'Submit'}
+  onPress={handleSubmit}
+  variant={'primary'}
+  size={'large'}
+  icon={<Icon name="check" />}
+/>
+```
 
-Base text component with theme-aware typography.
+#### Input
+
+Text input component with label and error support.
+
+```typescript
+interface InputProps {
+  value: string;
+  onChangeText: (text: string) => void;
+  placeholder?: string;
+  label?: string;
+  error?: string;
+  editable?: boolean;
+  secureTextEntry?: boolean;
+  keyboardType?: 'default' | 'numeric' | 'email-address' | 'phone-pad';
+  multiline?: boolean;
+  numberOfLines?: number;
+  style?: any;
+  testID?: string;
+}
+```
+
+**Example:**
+```typescript
+<Input
+  label={'Email'}
+  value={email}
+  onChangeText={setEmail}
+  placeholder={'Enter your email'}
+  keyboardType={'email-address'}
+  error={emailError}
+/>
+```
+
+#### CheckBox
+
+Checkbox component for boolean selections.
+
+```typescript
+interface CheckBoxProps {
+  value: boolean;
+  onValueChange: (value: boolean) => void;
+  label?: string;
+  disabled?: boolean;
+  style?: any;
+  testID?: string;
+}
+```
+
+**Example:**
+```typescript
+<CheckBox
+  value={isChecked}
+  onValueChange={setIsChecked}
+  label={'I agree to the terms'}
+/>
+```
+
+#### RadioButton
+
+Radio button for single selection from a group.
+
+```typescript
+interface RadioButtonProps {
+  value: string;
+  selected: string;
+  onSelect: (value: string) => void;
+  label?: string;
+  disabled?: boolean;
+  style?: any;
+  testID?: string;
+}
+```
+
+**Example:**
+```typescript
+<Column gap={'sm'}>
+  <RadioButton
+    value={'option1'}
+    selected={selectedOption}
+    onSelect={setSelectedOption}
+    label={'Option 1'}
+  />
+  <RadioButton
+    value={'option2'}
+    selected={selectedOption}
+    onSelect={setSelectedOption}
+    label={'Option 2'}
+  />
+</Column>
+```
+
+#### Switch
+
+Toggle switch for boolean values.
+
+```typescript
+interface SwitchProps {
+  value: boolean;
+  onValueChange: (value: boolean) => void;
+  disabled?: boolean;
+  style?: any;
+  testID?: string;
+}
+```
+
+**Example:**
+```typescript
+<Switch
+  value={isEnabled}
+  onValueChange={setIsEnabled}
+/>
+```
+
+---
+
+### Display Components
+
+#### ProgressBar
+
+Horizontal progress indicator.
+
+```typescript
+interface ProgressBarProps {
+  progress: number; // 0-1 range
+  height?: number;
+  color?: string;
+  backgroundColor?: string;
+  borderRadius?: 'xs' | 'sm' | 'md' | 'lg' | 'full';
+  style?: any;
+  testID?: string;
+}
+```
+
+**Example:**
+```typescript
+<ProgressBar
+  progress={0.65}
+  height={8}
+  color={theme.colors.primary}
+  borderRadius={'full'}
+/>
+```
+
+#### Badge
+
+Small status badge for labels and notifications.
+
+```typescript
+interface BadgeProps {
+  children: React.ReactNode;
+  variant?: 'primary' | 'secondary' | 'success' | 'error' | 'warning' | 'info';
+  size?: 'small' | 'medium' | 'large';
+  style?: any;
+  testID?: string;
+}
+```
+
+**Variants:**
+- `primary` - Blue badge
+- `secondary` - Gray badge
+- `success` - Green badge
+- `error` - Red badge
+- `warning` - Orange badge
+- `info` - Light blue badge
+
+**Example:**
+```typescript
+<Badge variant={'success'} size={'small'}>
+  Active
+</Badge>
+```
+
+#### Divider
+
+Visual separator line (horizontal or vertical).
+
+```typescript
+interface DividerProps {
+  orientation?: 'horizontal' | 'vertical';
+  thickness?: number;
+  color?: string;
+  style?: any;
+  testID?: string;
+}
+```
+
+**Example:**
+```typescript
+<Divider orientation={'horizontal'} thickness={1} />
+```
+
+---
+
+### Typography Components
+
+#### Text
+
+Base text component with theme-aware typography variants.
 
 ```typescript
 interface TextProps {
   children?: React.ReactNode;
-  variant?: 'h1' | 'h2' | ... | 'body1' | 'body2' | ... | 'caption' | 'overline';
+  variant?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 
+            'body1' | 'body2' | 'body3' | 'body4' | 'body5' | 'body6' |
+            'subtitle1' | 'subtitle2' | 'caption' | 'overline';
   color?: string;
   textAlign?: 'auto' | 'left' | 'right' | 'center' | 'justify';
   style?: any;
@@ -315,20 +582,35 @@ interface TextProps {
 }
 ```
 
-### Row & Column
+**Typography Hierarchy:**
+- **Headings**: `H1` (48px), `H2` (40px), `H3` (32px), `H4` (28px), `H5` (24px), `H6` (20px)
+- **Body**: `Body1`-`Body6` (16px-11px)
+- **Subtitles**: `SubTitle1` (18px), `SubTitle2` (16px)
+- **Small**: `Caption` (12px), `Overline` (10px)
 
-Flex container components for layout.
+**Example:**
+```typescript
+<Column gap={'sm'}>
+  <H1>Main Heading</H1>
+  <Body1>Regular body text</Body1>
+  <Caption>Small caption text</Caption>
+  <Text variant={'body2'} color={theme.colors.error}>
+    Custom colored text
+  </Text>
+</Column>
+```
+
+**Convenience Components:**
+
+All heading and body variants are exported as standalone components:
 
 ```typescript
-// Row = flexDirection: 'row' with centered items
-<Row gap="md" padding="lg">
-  {/* Horizontal layout */}
-</Row>
+import { H1, H2, H3, Body1, Body2, SubTitle1, Caption, Overline } from 'react-native-atomic-ui';
 
-// Column = flexDirection: 'column'
-<Column gap="md" padding="lg">
-  {/* Vertical layout */}
-</Column>
+// Use directly without variant prop
+<H1>Heading</H1>
+<Body1>Body text</Body1>
+<Caption>Caption</Caption>
 ```
 
 ## 🔗 Advanced Components
@@ -480,17 +762,7 @@ If custom fonts aren't loading, ensure they're linked in Info.plist:
 </array>
 ```
 
-## 🆙 Upgrading
 
-### From 0.x to 1.0
-
-Version 1.0 introduces breaking changes:
-
-- Theme structure updated with new color names
-- `useThemeWithRedux` hook removed (use `useTheme` with Redux context)
-- Component prop names standardized
-
-See [CHANGELOG.md](./CHANGELOG.md) for details.
 
 ## 📄 License
 

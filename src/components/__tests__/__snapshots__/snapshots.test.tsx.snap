@@ -1,0 +1,1323 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component Snapshots Display Components Badge error renders consistently 1`] = `
+<View
+  ref={null}
+  style={
+    [
+      {
+        "alignSelf": "flex-start",
+      },
+      {
+        "backgroundColor": "#FF3B30",
+        "borderRadius": 9999,
+        "fontSize": 10,
+        "paddingHorizontal": 4,
+        "paddingVertical": 2,
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    ref={null}
+    style={
+      [
+        {
+          "fontWeight": "600",
+        },
+        {
+          "color": "#FFFFFF",
+          "fontSize": 10,
+        },
+      ]
+    }
+  >
+    3
+  </Text>
+</View>
+`;
+
+exports[`Component Snapshots Display Components Badge primary renders consistently 1`] = `
+<View
+  ref={null}
+  style={
+    [
+      {
+        "alignSelf": "flex-start",
+      },
+      {
+        "backgroundColor": "#007AFF",
+        "borderRadius": 9999,
+        "fontSize": 12,
+        "paddingHorizontal": 8,
+        "paddingVertical": 4,
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    ref={null}
+    style={
+      [
+        {
+          "fontWeight": "600",
+        },
+        {
+          "color": "#FFFFFF",
+          "fontSize": 12,
+        },
+      ]
+    }
+  >
+    New
+  </Text>
+</View>
+`;
+
+exports[`Component Snapshots Display Components Divider horizontal renders consistently 1`] = `
+<View
+  ref={null}
+  style={
+    [
+      {
+        "backgroundColor": "#CCCCCC",
+        "height": 1,
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+/>
+`;
+
+exports[`Component Snapshots Display Components Divider vertical renders consistently 1`] = `
+<View
+  ref={null}
+  style={
+    [
+      {
+        "backgroundColor": "#FF0000",
+        "height": "100%",
+        "width": 2,
+      },
+      undefined,
+    ]
+  }
+/>
+`;
+
+exports[`Component Snapshots Display Components ProgressBar renders consistently 1`] = `
+<View
+  ref={null}
+  style={
+    [
+      {
+        "overflow": "hidden",
+      },
+      {
+        "backgroundColor": "#CCCCCC",
+        "borderRadius": 9999,
+        "height": 8,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    ref={null}
+    style={
+      [
+        {
+          "height": "100%",
+        },
+        {
+          "backgroundColor": "#007AFF",
+          "width": "65%",
+        },
+      ]
+    }
+  />
+</View>
+`;
+
+exports[`Component Snapshots Input Components Button disabled renders consistently 1`] = `
+<TouchableOpacity
+  disabled={true}
+  onPress={[Function]}
+  ref={null}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      },
+      {
+        "backgroundColor": "#007AFF",
+        "borderColor": "#007AFF",
+        "borderRadius": 8,
+        "minHeight": 48,
+        "opacity": 0.5,
+        "paddingHorizontal": 24,
+        "paddingVertical": 16,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    ref={null}
+    style={
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text
+      ref={null}
+      style={
+        [
+          {
+            "fontSize": 16,
+            "fontWeight": "400",
+            "lineHeight": 24,
+          },
+          {
+            "color": "#FFFFFF",
+          },
+          undefined,
+          {
+            "fontWeight": "600",
+          },
+        ]
+      }
+    >
+      Disabled
+    </Text>
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Component Snapshots Input Components Button ghost renders consistently 1`] = `
+<TouchableOpacity
+  disabled={false}
+  onPress={[Function]}
+  ref={null}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      },
+      {
+        "backgroundColor": "transparent",
+        "borderColor": "#007AFF",
+        "borderRadius": 8,
+        "borderWidth": 1,
+        "minHeight": 48,
+        "opacity": 1,
+        "paddingHorizontal": 24,
+        "paddingVertical": 16,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    ref={null}
+    style={
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text
+      ref={null}
+      style={
+        [
+          {
+            "fontSize": 16,
+            "fontWeight": "400",
+            "lineHeight": 24,
+          },
+          {
+            "color": "#007AFF",
+          },
+          undefined,
+          {
+            "fontWeight": "600",
+          },
+        ]
+      }
+    >
+      Ghost Button
+    </Text>
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Component Snapshots Input Components Button primary renders consistently 1`] = `
+<TouchableOpacity
+  disabled={false}
+  onPress={[Function]}
+  ref={null}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      },
+      {
+        "backgroundColor": "#007AFF",
+        "borderColor": "#007AFF",
+        "borderRadius": 8,
+        "minHeight": 48,
+        "opacity": 1,
+        "paddingHorizontal": 24,
+        "paddingVertical": 16,
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    ref={null}
+    style={
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text
+      ref={null}
+      style={
+        [
+          {
+            "fontSize": 16,
+            "fontWeight": "400",
+            "lineHeight": 24,
+          },
+          {
+            "color": "#FFFFFF",
+          },
+          undefined,
+          {
+            "fontWeight": "600",
+          },
+        ]
+      }
+    >
+      Primary Button
+    </Text>
+  </View>
+</TouchableOpacity>
+`;
+
+exports[`Component Snapshots Input Components CheckBox checked renders consistently 1`] = `
+<TouchableOpacity
+  activeOpacity={0.7}
+  disabled={false}
+  onPress={[Function]}
+  ref={null}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    ref={null}
+    style={
+      [
+        {
+          "alignItems": "center",
+          "borderWidth": 2,
+          "height": 24,
+          "justifyContent": "center",
+          "width": 24,
+        },
+        {
+          "backgroundColor": "#007AFF",
+          "borderColor": "#007AFF",
+          "borderRadius": 2,
+        },
+      ]
+    }
+  >
+    <Text
+      ref={null}
+      style={
+        [
+          {
+            "fontSize": 16,
+            "fontWeight": "bold",
+          },
+          {
+            "color": "#FFFFFF",
+          },
+        ]
+      }
+    >
+      ✓
+    </Text>
+  </View>
+  <Text
+    ref={null}
+    style={
+      [
+        {
+          "fontSize": 16,
+          "fontWeight": "400",
+          "lineHeight": 24,
+        },
+        {
+          "color": "#000000",
+          "marginLeft": 8,
+        },
+      ]
+    }
+  >
+    Accept terms
+  </Text>
+</TouchableOpacity>
+`;
+
+exports[`Component Snapshots Input Components CheckBox unchecked renders consistently 1`] = `
+<TouchableOpacity
+  activeOpacity={0.7}
+  disabled={false}
+  onPress={[Function]}
+  ref={null}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    ref={null}
+    style={
+      [
+        {
+          "alignItems": "center",
+          "borderWidth": 2,
+          "height": 24,
+          "justifyContent": "center",
+          "width": 24,
+        },
+        {
+          "backgroundColor": "transparent",
+          "borderColor": "#CCCCCC",
+          "borderRadius": 2,
+        },
+      ]
+    }
+  />
+  <Text
+    ref={null}
+    style={
+      [
+        {
+          "fontSize": 16,
+          "fontWeight": "400",
+          "lineHeight": 24,
+        },
+        {
+          "color": "#000000",
+          "marginLeft": 8,
+        },
+      ]
+    }
+  >
+    Accept terms
+  </Text>
+</TouchableOpacity>
+`;
+
+exports[`Component Snapshots Input Components Input renders consistently 1`] = `
+<View
+  ref={null}
+  style={
+    [
+      {
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    ref={null}
+    style={
+      [
+        {
+          "fontSize": 15,
+          "fontWeight": "400",
+          "lineHeight": 22,
+        },
+        {
+          "color": "#666666",
+          "marginBottom": 4,
+        },
+      ]
+    }
+  >
+    Email
+  </Text>
+  <TextInput
+    editable={true}
+    keyboardType="default"
+    multiline={false}
+    numberOfLines={1}
+    onChangeText={[Function]}
+    placeholder="Enter email"
+    placeholderTextColor="#999999"
+    ref={null}
+    secureTextEntry={false}
+    style={
+      [
+        {
+          "fontSize": 16,
+          "fontWeight": "400",
+          "lineHeight": 24,
+        },
+        {
+          "borderWidth": 1,
+        },
+        {
+          "backgroundColor": "#F5F5F5",
+          "borderColor": "#CCCCCC",
+          "borderRadius": 4,
+          "color": "#000000",
+          "minHeight": undefined,
+          "padding": 16,
+        },
+      ]
+    }
+    value="Test Value"
+  />
+</View>
+`;
+
+exports[`Component Snapshots Input Components Input with error renders consistently 1`] = `
+<View
+  ref={null}
+  style={
+    [
+      {
+        "width": "100%",
+      },
+      undefined,
+    ]
+  }
+>
+  <Text
+    ref={null}
+    style={
+      [
+        {
+          "fontSize": 15,
+          "fontWeight": "400",
+          "lineHeight": 22,
+        },
+        {
+          "color": "#FF3B30",
+          "marginBottom": 4,
+        },
+      ]
+    }
+  >
+    Email
+  </Text>
+  <TextInput
+    editable={true}
+    keyboardType="default"
+    multiline={false}
+    numberOfLines={1}
+    onChangeText={[Function]}
+    placeholderTextColor="#999999"
+    ref={null}
+    secureTextEntry={false}
+    style={
+      [
+        {
+          "fontSize": 16,
+          "fontWeight": "400",
+          "lineHeight": 24,
+        },
+        {
+          "borderWidth": 1,
+        },
+        {
+          "backgroundColor": "#F5F5F5",
+          "borderColor": "#FF3B30",
+          "borderRadius": 4,
+          "color": "#000000",
+          "minHeight": undefined,
+          "padding": 16,
+        },
+      ]
+    }
+    value=""
+  />
+  <Text
+    ref={null}
+    style={
+      [
+        {
+          "fontSize": 12,
+          "fontWeight": "400",
+          "lineHeight": 16,
+        },
+        {
+          "color": "#FF3B30",
+          "marginTop": 4,
+        },
+      ]
+    }
+  >
+    This field is required
+  </Text>
+</View>
+`;
+
+exports[`Component Snapshots Input Components RadioButton selected renders consistently 1`] = `
+<TouchableOpacity
+  activeOpacity={0.7}
+  disabled={false}
+  onPress={[Function]}
+  ref={null}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    ref={null}
+    style={
+      [
+        {
+          "alignItems": "center",
+          "borderRadius": 12,
+          "borderWidth": 2,
+          "height": 24,
+          "justifyContent": "center",
+          "width": 24,
+        },
+        {
+          "borderColor": "#007AFF",
+        },
+      ]
+    }
+  >
+    <View
+      ref={null}
+      style={
+        [
+          {
+            "borderRadius": 6,
+            "height": 12,
+            "width": 12,
+          },
+          {
+            "backgroundColor": "#007AFF",
+          },
+        ]
+      }
+    />
+  </View>
+  <Text
+    ref={null}
+    style={
+      [
+        {
+          "fontSize": 16,
+          "fontWeight": "400",
+          "lineHeight": 24,
+        },
+        {
+          "color": "#000000",
+          "marginLeft": 8,
+        },
+      ]
+    }
+  >
+    Option 1
+  </Text>
+</TouchableOpacity>
+`;
+
+exports[`Component Snapshots Input Components RadioButton unselected renders consistently 1`] = `
+<TouchableOpacity
+  activeOpacity={0.7}
+  disabled={false}
+  onPress={[Function]}
+  ref={null}
+  style={
+    [
+      {
+        "alignItems": "center",
+        "flexDirection": "row",
+      },
+      undefined,
+    ]
+  }
+>
+  <View
+    ref={null}
+    style={
+      [
+        {
+          "alignItems": "center",
+          "borderRadius": 12,
+          "borderWidth": 2,
+          "height": 24,
+          "justifyContent": "center",
+          "width": 24,
+        },
+        {
+          "borderColor": "#CCCCCC",
+        },
+      ]
+    }
+  />
+  <Text
+    ref={null}
+    style={
+      [
+        {
+          "fontSize": 16,
+          "fontWeight": "400",
+          "lineHeight": 24,
+        },
+        {
+          "color": "#000000",
+          "marginLeft": 8,
+        },
+      ]
+    }
+  >
+    Option 1
+  </Text>
+</TouchableOpacity>
+`;
+
+exports[`Component Snapshots Input Components Switch renders consistently 1`] = `
+<Switch
+  disabled={false}
+  ios_backgroundColor="#CCCCCC"
+  onValueChange={[Function]}
+  ref={null}
+  thumbColor="#FFFFFF"
+  trackColor={
+    {
+      "false": "#CCCCCC",
+      "true": "#007AFF",
+    }
+  }
+  value={true}
+/>
+`;
+
+exports[`Component Snapshots Layout Components Box renders consistently 1`] = `
+<View
+  ref={null}
+  style={
+    [
+      false,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      false,
+      false,
+      {
+        "padding": 16,
+      },
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      {
+        "backgroundColor": "#FFFFFF",
+      },
+      {
+        "borderRadius": 8,
+      },
+      undefined,
+    ]
+  }
+  testID="box"
+>
+  <Text
+    ref={null}
+    style={
+      [
+        {
+          "fontSize": 16,
+          "fontWeight": "400",
+          "lineHeight": 24,
+        },
+        {
+          "color": "#000000",
+        },
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    Box Content
+  </Text>
+</View>
+`;
+
+exports[`Component Snapshots Layout Components Collapsible renders consistently (collapsed) 1`] = `
+<View
+  ref={null}
+  style={
+    [
+      {
+        "borderWidth": 1,
+        "overflow": "hidden",
+      },
+      {
+        "borderColor": "#CCCCCC",
+        "borderRadius": 8,
+      },
+      undefined,
+    ]
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.7}
+    onPress={[Function]}
+    ref={null}
+    style={
+      [
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+        {
+          "backgroundColor": "#F5F5F5",
+          "padding": 16,
+        },
+      ]
+    }
+  >
+    <Text
+      ref={null}
+      style={
+        [
+          {
+            "fontSize": 16,
+            "fontWeight": "400",
+            "lineHeight": 24,
+          },
+          {
+            "fontWeight": "600",
+          },
+          {
+            "color": "#000000",
+          },
+        ]
+      }
+    >
+      Section Title
+    </Text>
+    <Text
+      ref={null}
+      style={
+        [
+          {
+            "fontSize": 34,
+            "fontWeight": "700",
+            "lineHeight": 41,
+          },
+          {
+            "color": "#666666",
+          },
+        ]
+      }
+    >
+      +
+    </Text>
+  </TouchableOpacity>
+</View>
+`;
+
+exports[`Component Snapshots Layout Components Collapsible renders consistently (expanded) 1`] = `
+<View
+  ref={null}
+  style={
+    [
+      {
+        "borderWidth": 1,
+        "overflow": "hidden",
+      },
+      {
+        "borderColor": "#CCCCCC",
+        "borderRadius": 8,
+      },
+      undefined,
+    ]
+  }
+>
+  <TouchableOpacity
+    activeOpacity={0.7}
+    onPress={[Function]}
+    ref={null}
+    style={
+      [
+        {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "justifyContent": "space-between",
+        },
+        {
+          "backgroundColor": "#F5F5F5",
+          "padding": 16,
+        },
+      ]
+    }
+  >
+    <Text
+      ref={null}
+      style={
+        [
+          {
+            "fontSize": 16,
+            "fontWeight": "400",
+            "lineHeight": 24,
+          },
+          {
+            "fontWeight": "600",
+          },
+          {
+            "color": "#000000",
+          },
+        ]
+      }
+    >
+      Section Title
+    </Text>
+    <Text
+      ref={null}
+      style={
+        [
+          {
+            "fontSize": 34,
+            "fontWeight": "700",
+            "lineHeight": 41,
+          },
+          {
+            "color": "#666666",
+          },
+        ]
+      }
+    >
+      −
+    </Text>
+  </TouchableOpacity>
+  <View
+    ref={null}
+    style={
+      [
+        {},
+        {
+          "backgroundColor": "#FFFFFF",
+          "padding": 16,
+        },
+      ]
+    }
+  >
+    <Text
+      ref={null}
+      style={
+        [
+          {
+            "fontSize": 16,
+            "fontWeight": "400",
+            "lineHeight": 24,
+          },
+          {
+            "color": "#000000",
+          },
+          undefined,
+          undefined,
+        ]
+      }
+    >
+      Visible Content
+    </Text>
+  </View>
+</View>
+`;
+
+exports[`Component Snapshots Layout Components Column renders consistently 1`] = `
+<View
+  ref={null}
+  style={
+    [
+      {
+        "flexDirection": "column",
+      },
+      false,
+      undefined,
+      undefined,
+      undefined,
+      false,
+      false,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      {
+        "gap": 16,
+      },
+      undefined,
+      undefined,
+      undefined,
+    ]
+  }
+  testID="column"
+>
+  <Text
+    ref={null}
+    style={
+      [
+        {
+          "fontSize": 16,
+          "fontWeight": "400",
+          "lineHeight": 24,
+        },
+        {
+          "color": "#000000",
+        },
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    Item 1
+  </Text>
+  <Text
+    ref={null}
+    style={
+      [
+        {
+          "fontSize": 16,
+          "fontWeight": "400",
+          "lineHeight": 24,
+        },
+        {
+          "color": "#000000",
+        },
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    Item 2
+  </Text>
+</View>
+`;
+
+exports[`Component Snapshots Layout Components Row renders consistently 1`] = `
+<View
+  ref={null}
+  style={
+    [
+      {
+        "flexDirection": "row",
+      },
+      false,
+      {
+        "alignItems": "center",
+      },
+      undefined,
+      undefined,
+      false,
+      false,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      undefined,
+      {
+        "gap": 8,
+      },
+      undefined,
+      undefined,
+      undefined,
+    ]
+  }
+  testID="row"
+>
+  <Text
+    ref={null}
+    style={
+      [
+        {
+          "fontSize": 16,
+          "fontWeight": "400",
+          "lineHeight": 24,
+        },
+        {
+          "color": "#000000",
+        },
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    Item 1
+  </Text>
+  <Text
+    ref={null}
+    style={
+      [
+        {
+          "fontSize": 16,
+          "fontWeight": "400",
+          "lineHeight": 24,
+        },
+        {
+          "color": "#000000",
+        },
+        undefined,
+        undefined,
+      ]
+    }
+  >
+    Item 2
+  </Text>
+</View>
+`;
+
+exports[`Component Snapshots Typography Components Body1 renders consistently 1`] = `
+<Text
+  ref={null}
+  style={
+    [
+      {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "lineHeight": 24,
+      },
+      {
+        "color": "#000000",
+      },
+      undefined,
+      undefined,
+    ]
+  }
+>
+  Body paragraph text
+</Text>
+`;
+
+exports[`Component Snapshots Typography Components Body2 renders consistently 1`] = `
+<Text
+  ref={null}
+  style={
+    [
+      {
+        "fontSize": 15,
+        "fontWeight": "400",
+        "lineHeight": 22,
+      },
+      {
+        "color": "#000000",
+      },
+      undefined,
+      undefined,
+    ]
+  }
+>
+  Secondary body text
+</Text>
+`;
+
+exports[`Component Snapshots Typography Components Caption renders consistently 1`] = `
+<Text
+  ref={null}
+  style={
+    [
+      {
+        "fontSize": 12,
+        "fontWeight": "400",
+        "lineHeight": 16,
+      },
+      {
+        "color": "#000000",
+      },
+      undefined,
+      undefined,
+    ]
+  }
+>
+  Small caption text
+</Text>
+`;
+
+exports[`Component Snapshots Typography Components H1 renders consistently 1`] = `
+<Text
+  ref={null}
+  style={
+    [
+      {
+        "fontSize": 48,
+        "fontWeight": "700",
+        "lineHeight": 56,
+      },
+      {
+        "color": "#000000",
+      },
+      undefined,
+      undefined,
+    ]
+  }
+>
+  Main Heading
+</Text>
+`;
+
+exports[`Component Snapshots Typography Components H2 renders consistently 1`] = `
+<Text
+  ref={null}
+  style={
+    [
+      {
+        "fontSize": 40,
+        "fontWeight": "700",
+        "lineHeight": 48,
+      },
+      {
+        "color": "#000000",
+      },
+      undefined,
+      undefined,
+    ]
+  }
+>
+  Sub Heading
+</Text>
+`;
+
+exports[`Component Snapshots Typography Components H3 renders consistently 1`] = `
+<Text
+  ref={null}
+  style={
+    [
+      {
+        "fontSize": 34,
+        "fontWeight": "700",
+        "lineHeight": 41,
+      },
+      {
+        "color": "#000000",
+      },
+      undefined,
+      undefined,
+    ]
+  }
+>
+  Section Heading
+</Text>
+`;
+
+exports[`Component Snapshots Typography Components Overline renders consistently 1`] = `
+<Text
+  ref={null}
+  style={
+    [
+      {
+        "fontSize": 10,
+        "fontWeight": "600",
+        "lineHeight": 14,
+      },
+      {
+        "color": "#000000",
+      },
+      undefined,
+      undefined,
+    ]
+  }
+>
+  OVERLINE TEXT
+</Text>
+`;
+
+exports[`Component Snapshots Typography Components SubTitle1 renders consistently 1`] = `
+<Text
+  ref={null}
+  style={
+    [
+      {
+        "fontSize": 14,
+        "fontWeight": "600",
+        "lineHeight": 20,
+      },
+      {
+        "color": "#000000",
+      },
+      undefined,
+      undefined,
+    ]
+  }
+>
+  Subtitle
+</Text>
+`;
+
+exports[`Component Snapshots Typography Components Text with variant renders consistently 1`] = `
+<Text
+  ref={null}
+  style={
+    [
+      {
+        "fontSize": 16,
+        "fontWeight": "400",
+        "lineHeight": 24,
+      },
+      {
+        "color": "#000000",
+      },
+      undefined,
+      undefined,
+    ]
+  }
+>
+  Body text
+</Text>
+`;

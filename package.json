@@ -1,6 +1,6 @@
 {
   "name": "react-native-atomic-ui",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "Zero-dependency atomic UI components library for React Native with built-in dark mode support",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
@@ -69,7 +69,8 @@
   },
   "devDependencies": {
     "@react-native/eslint-config": "^0.73.0",
-    "@testing-library/react-native": "^12.4.0",
+    "@testing-library/jest-native": "^5.4.3",
+    "@testing-library/react-native": "^13.3.3",
     "@types/jest": "^29.5.0",
     "@types/react": "^19.0.0",
     "@types/react-native": "^0.73.0",
@@ -80,51 +81,50 @@
     "eslint-plugin-react": "^7.37.5",
     "jest": "^29.7.0",
     "prettier": "^3.1.0",
-    "react-native-test-app": "^5.0.0",
     "ts-jest": "^29.4.6",
     "typescript": "^5.3.0",
     "typescript-eslint": "^8.0.0"
   },
   "exports": {
     ".": {
-      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "require": "./dist/index.js"
     },
     "./theme": {
-      "require": "./dist/theme/index.js",
+      "types": "./dist/theme/index.d.ts",
       "import": "./dist/theme/index.mjs",
-      "types": "./dist/theme/index.d.ts"
+      "require": "./dist/theme/index.js"
     },
     "./components": {
-      "require": "./dist/components/index.js",
+      "types": "./dist/components/index.d.ts",
       "import": "./dist/components/index.mjs",
-      "types": "./dist/components/index.d.ts"
+      "require": "./dist/components/index.js"
     },
     "./date-picker": {
-      "require": "./dist/advanced/date-picker/index.js",
+      "types": "./dist/advanced/date-picker/index.d.ts",
       "import": "./dist/advanced/date-picker/index.mjs",
-      "types": "./dist/advanced/date-picker/index.d.ts"
+      "require": "./dist/advanced/date-picker/index.js"
     },
     "./picker": {
-      "require": "./dist/advanced/picker/index.js",
+      "types": "./dist/advanced/picker/index.d.ts",
       "import": "./dist/advanced/picker/index.mjs",
-      "types": "./dist/advanced/picker/index.d.ts"
+      "require": "./dist/advanced/picker/index.js"
     },
     "./file-picker": {
-      "require": "./dist/advanced/file-picker/index.js",
+      "types": "./dist/advanced/file-picker/index.d.ts",
       "import": "./dist/advanced/file-picker/index.mjs",
-      "types": "./dist/advanced/file-picker/index.d.ts"
+      "require": "./dist/advanced/file-picker/index.js"
     },
     "./rich-text": {
-      "require": "./dist/advanced/rich-text/index.js",
+      "types": "./dist/advanced/rich-text/index.d.ts",
       "import": "./dist/advanced/rich-text/index.mjs",
-      "types": "./dist/advanced/rich-text/index.d.ts"
+      "require": "./dist/advanced/rich-text/index.js"
     },
     "./advanced": {
-      "require": "./dist/advanced/index.js",
+      "types": "./dist/advanced/index.d.ts",
       "import": "./dist/advanced/index.mjs",
-      "types": "./dist/advanced/index.d.ts"
+      "require": "./dist/advanced/index.js"
     }
   },
   "engines": {

@@ -1,3 +1,5 @@
+import type { ViewStyle, StyleProp } from 'react-native';
+
 /**
  * Rich Text Components - Advanced text display and editing
  * Requires peer dependencies:
@@ -15,7 +17,7 @@
 export interface RichTextProps {
   html: string;
   onLinkPress?: (url: string) => void;
-  style?: any;
+  style?: StyleProp<ViewStyle>;
   testID?: string;
 }
 
@@ -23,7 +25,7 @@ export interface RichTextInputProps {
   value: string;
   onChange: (html: string) => void;
   placeholder?: string;
-  style?: any;
+  style?: StyleProp<ViewStyle>;
   testID?: string;
 }
 

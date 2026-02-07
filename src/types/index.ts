@@ -1,4 +1,15 @@
+import type { ViewStyle, TextStyle, StyleProp, DimensionValue } from 'react-native';
+
 // Theme types
+
+export interface ShadowStyle {
+  shadowColor: string;
+  shadowOffset: { width: number; height: number };
+  shadowOpacity: number;
+  shadowRadius: number;
+  elevation: number;
+}
+
 export interface ColorBank {
   primary: string;
   secondary: string;
@@ -64,9 +75,9 @@ export interface Theme {
     full: number;
   };
   shadows: {
-    light: any;
-    medium: any;
-    heavy: any;
+    light: ShadowStyle;
+    medium: ShadowStyle;
+    heavy: ShadowStyle;
   };
 }
 
@@ -99,9 +110,9 @@ export interface BoxProps {
   gap?: keyof Theme['spacing'];
   backgroundColor?: string;
   borderRadius?: keyof Theme['borderRadius'];
-  width?: number | string;
-  height?: number | string;
-  style?: any;
+  width?: DimensionValue;
+  height?: DimensionValue;
+  style?: StyleProp<ViewStyle>;
   testID?: string;
 }
 
@@ -113,7 +124,7 @@ export interface ButtonProps {
   disabled?: boolean;
   loading?: boolean;
   icon?: React.ReactNode;
-  style?: any;
+  style?: StyleProp<ViewStyle>;
   testID?: string;
 }
 
@@ -128,7 +139,7 @@ export interface InputProps {
   keyboardType?: 'default' | 'numeric' | 'email-address' | 'phone-pad';
   multiline?: boolean;
   numberOfLines?: number;
-  style?: any;
+  style?: StyleProp<ViewStyle>;
   testID?: string;
 }
 
@@ -137,7 +148,7 @@ export interface CheckBoxProps {
   onValueChange: (value: boolean) => void;
   label?: string;
   disabled?: boolean;
-  style?: any;
+  style?: StyleProp<ViewStyle>;
   testID?: string;
 }
 
@@ -147,7 +158,7 @@ export interface RadioButtonProps {
   onSelect: (value: string) => void;
   label?: string;
   disabled?: boolean;
-  style?: any;
+  style?: StyleProp<ViewStyle>;
   testID?: string;
 }
 
@@ -155,7 +166,7 @@ export interface SwitchProps {
   value: boolean;
   onValueChange: (value: boolean) => void;
   disabled?: boolean;
-  style?: any;
+  style?: StyleProp<ViewStyle>;
   testID?: string;
 }
 
@@ -165,7 +176,7 @@ export interface ProgressBarProps {
   color?: string;
   backgroundColor?: string;
   borderRadius?: keyof Theme['borderRadius'];
-  style?: any;
+  style?: StyleProp<ViewStyle>;
   testID?: string;
 }
 
@@ -173,7 +184,7 @@ export interface BadgeProps {
   children: React.ReactNode;
   variant?: 'primary' | 'secondary' | 'success' | 'error' | 'warning' | 'info';
   size?: 'small' | 'medium' | 'large';
-  style?: any;
+  style?: StyleProp<ViewStyle>;
   testID?: string;
 }
 
@@ -181,7 +192,7 @@ export interface DividerProps {
   orientation?: 'horizontal' | 'vertical';
   thickness?: number;
   color?: string;
-  style?: any;
+  style?: StyleProp<ViewStyle>;
   testID?: string;
 }
 
@@ -189,7 +200,7 @@ export interface CollapsibleProps {
   title: string;
   children: React.ReactNode;
   initiallyExpanded?: boolean;
-  style?: any;
+  style?: StyleProp<ViewStyle>;
   testID?: string;
 }
 
@@ -214,6 +225,6 @@ export interface TextProps {
     | 'overline';
   color?: string;
   textAlign?: 'auto' | 'left' | 'right' | 'center' | 'justify';
-  style?: any;
+  style?: StyleProp<TextStyle>;
   testID?: string;
 }

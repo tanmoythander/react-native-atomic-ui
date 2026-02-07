@@ -138,12 +138,13 @@ All component prop types are centralized in `src/types/index.ts`:
 
 ### Testing Setup
 
-- **Framework**: Jest + TypeScript (`ts-jest`)
+- **Framework**: Jest + TypeScript (`ts-jest`) + React Native Testing Library v13
 - **Test environment**: `node` (not React Native environment)
-- **Jest module mapper** duplicates tsconfig path aliases
-- **Coverage threshold**: 80% lines, 75% functions, 70% branches
+- **Mock system**: Comprehensive React Native mock in `__mocks__/react-native.js`
+- **Coverage threshold**: 80% lines, 75% functions, 70% branches, 80% statements
 - **Test location**: `__tests__/` directories or `*.test.ts(x)` files
-- **Note**: Tests currently don't exist - `npm test` exits with code 1 (zero tests found). This is intentional for the MVP.
+- **Current status**: 107 tests passing across 12 suites, 29 snapshot tests, ~88% coverage
+- **Note**: react-test-renderer deprecation warnings are suppressed in jest.setup.js
 
 ## Key Conventions
 
@@ -395,3 +396,54 @@ npm run ios        # Or: npm run android
 4. **Advanced components**: Test with actual peer dependencies installed - they won't error until used
 5. **Bundle size**: `react` and `react-native` are external, not bundled (peer dependencies)
 6. **Example app linking**: During development, link local library with `npm install ../../`. Before testing published version, reinstall from npm with `npm install react-native-atomic-ui@latest`
+
+## Security & Dependency Management
+
+### Handling Transitive Dependency Vulnerabilities
+
+When `npm audit` reports vulnerabilities from transitive dependencies (dependencies of your dependencies):
+
+1. **Check if the vulnerable package is actually used:**
+   ```bash
+   npm ls <package-name>
+   ```
+
+2. **For dev dependencies:** If unused, remove the parent package
+   ```bash
+   npm uninstall <parent-package>
+   ```
+
+3. **For runtime dependencies:** Use npm overrides to force a patched version
+   ```json
+   {
+     "overrides": {
+       "vulnerable-package": "^fixed.version.0"
+     }
+   }
+   ```
+
+### Example App Security
+
+The example app (`examples/app`) has its own package.json and may have different vulnerabilities than the library. Common pattern:
+
+- Vulnerability in React Native CLI tools (e.g., `fast-xml-parser`)
+- Solution: Add override in `examples/app/package.json`:
+  ```json
+  {
+    "overrides": {
+      "fast-xml-parser": "^5.3.4"
+    }
+  }
+  ```
+- Reinstall: `cd examples/app && rm -rf node_modules package-lock.json && npm install`
+
+### Testing Security
+
+Both library and example app should have zero vulnerabilities:
+```bash
+# Check library
+npm audit
+
+# Check example app
+cd examples/app && npm audit
+```
