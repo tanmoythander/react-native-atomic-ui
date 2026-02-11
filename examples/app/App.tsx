@@ -647,7 +647,7 @@ function AppContent() {
                 Made with react-native-atomic-ui
               </Body2>
               <Caption color={theme.colors.textTertiary} textAlign={'center'}>
-                v1.0.0 • Zero Dependencies • TypeScript First
+                v1.0.6 • Zero Dependencies • TypeScript First
               </Caption>
             </Column>
           </Box>
