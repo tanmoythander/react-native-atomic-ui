@@ -59,14 +59,6 @@
       "optional": false
     }
   },
-  "optionalDependencies": {
-    "@react-native-community/datetimepicker": "^8.0.0",
-    "@react-native-community/netinfo": "^11.0.0",
-    "@react-native-documents/picker": "^10.0.0",
-    "react-native-picker-select": "^9.0.0",
-    "react-native-shimmer-placeholder": "^2.0.0",
-    "react-native-webview": "^13.0.0"
-  },
   "devDependencies": {
     "@react-native/eslint-config": "^0.73.0",
     "@testing-library/jest-native": "^5.4.3",
@@ -100,31 +92,6 @@
       "types": "./dist/components/index.d.ts",
       "import": "./dist/components/index.mjs",
       "require": "./dist/components/index.js"
-    },
-    "./date-picker": {
-      "types": "./dist/advanced/date-picker/index.d.ts",
-      "import": "./dist/advanced/date-picker/index.mjs",
-      "require": "./dist/advanced/date-picker/index.js"
-    },
-    "./picker": {
-      "types": "./dist/advanced/picker/index.d.ts",
-      "import": "./dist/advanced/picker/index.mjs",
-      "require": "./dist/advanced/picker/index.js"
-    },
-    "./file-picker": {
-      "types": "./dist/advanced/file-picker/index.d.ts",
-      "import": "./dist/advanced/file-picker/index.mjs",
-      "require": "./dist/advanced/file-picker/index.js"
-    },
-    "./rich-text": {
-      "types": "./dist/advanced/rich-text/index.d.ts",
-      "import": "./dist/advanced/rich-text/index.mjs",
-      "require": "./dist/advanced/rich-text/index.js"
-    },
-    "./advanced": {
-      "types": "./dist/advanced/index.d.ts",
-      "import": "./dist/advanced/index.mjs",
-      "require": "./dist/advanced/index.js"
     }
   },
   "engines": {

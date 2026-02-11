@@ -1,7 +1,5 @@
 #!/usr/bin/env node
 const esbuild = require('esbuild');
-const fs = require('fs');
-const path = require('path');
 
 const baseConfig = {
   bundle: true,
@@ -15,27 +13,7 @@ const baseConfig = {
   external: ['react', 'react-native'],
 };
 
-const entryPoints = [
-  'src/index.ts',
-  'src/theme/index.tsx',
-  'src/components/index.ts',
-];
-
-// Advanced entry points
-const advancedDirs = [
-  'src/advanced/date-picker',
-  'src/advanced/picker',
-  'src/advanced/file-picker',
-  'src/advanced/rich-text',
-];
-
-// Add advanced entry points if they exist
-advancedDirs.forEach((dir) => {
-  const indexFile = path.join(dir, 'index.ts');
-  if (fs.existsSync(indexFile)) {
-    entryPoints.push(indexFile);
-  }
-});
+const entryPoints = ['src/index.ts', 'src/theme/index.tsx', 'src/components/index.ts'];
 
 async function build() {
   try {

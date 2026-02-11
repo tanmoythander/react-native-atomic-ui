@@ -7,10 +7,9 @@
 - ✅ **30+ Core Components** - Ready-to-use UI building blocks with zero external dependencies
 - ✅ **TypeScript First** - Full type definitions, strict mode enabled
 - ✅ **Dark Mode Built-in** - Light/dark themes with system preference detection
-- ✅ **Context-Based Theme** - Pure React Context (Redux optional for advanced use cases)
+- ✅ **Context-Based Theme** - Pure React Context with system preference support
 - ✅ **Small Bundle** - ~50-80 KB minified core library
 - ✅ **Modular Architecture** - Import only what you need
-- ✅ **Advanced Components** - Optional peer dependencies for date pickers, rich text, file selection
 - ✅ **Platform Support** - iOS 12.0+, Android 6.0+
 - ✅ **React Native 0.73.0+** - Broad ecosystem compatibility
 
@@ -78,26 +77,6 @@ cd examples/app
 npm install
 cd ios && pod install && cd ..
 npx react-native run-ios  # or run-android
-```
-
-### With Optional Components
-
-```bash
-# For date picker
-npm install @react-native-community/datetimepicker
-
-# For dropdown pickers
-npm install react-native-picker-select
-
-# For file selection
-npm install @react-native-documents/picker
-
-# For rich text display
-npm install react-native-webview
-
-# For advanced features
-npm install react-native-shimmer-placeholder
-npm install @react-native-community/netinfo
 ```
 
 ## 🔧 Quick Start
@@ -611,70 +590,6 @@ import { H1, H2, H3, Body1, Body2, SubTitle1, Caption, Overline } from 'react-na
 <H1>Heading</H1>
 <Body1>Body text</Body1>
 <Caption>Caption</Caption>
-```
-
-## 🔗 Advanced Components
-
-Advanced components require specific peer dependencies. Import them from submodules:
-
-### Date Picker
-
-```typescript
-import { DatePickerInput } from 'react-native-atomic-ui/date-picker';
-
-// Requires: npm install @react-native-community/datetimepicker
-
-<DatePickerInput
-  value={date}
-  onChange={setDate}
-  label="Select Date"
-  format="DD/MM/YYYY"
-/>
-```
-
-### Pickers
-
-```typescript
-import { BorderedPickerInput } from 'react-native-atomic-ui/picker';
-
-// Requires: npm install react-native-picker-select
-
-<BorderedPickerInput
-  value={selectedValue}
-  onValueChange={setSelectedValue}
-  items={[
-    { label: 'Option 1', value: '1' },
-    { label: 'Option 2', value: '2' },
-  ]}
-  label="Select an option"
-/>
-```
-
-### File Picker
-
-```typescript
-import { FilePicker } from 'react-native-atomic-ui/file-picker';
-
-// Requires: npm install @react-native-documents/picker
-
-<FilePicker
-  onFileSelected={handleFileSelected}
-  label="Choose File"
-/>
-```
-
-### Rich Text
-
-```typescript
-import { RichText, RichTextInput } from 'react-native-atomic-ui/rich-text';
-
-// Requires: npm install react-native-webview
-// For editor: npm install github:starburst997/10tap-editor#jd
-
-<RichText
-  html="<p>This is <strong>rich</strong> text</p>"
-  onLinkPress={(url) => Linking.openURL(url)}
-/>
 ```
 
 ## 🛠️ TypeScript Support

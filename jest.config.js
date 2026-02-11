@@ -10,7 +10,6 @@ module.exports = {
     '@theme/(.*)': '<rootDir>/src/theme/$1',
     '@types/(.*)': '<rootDir>/src/types/$1',
     '@utilities/(.*)': '<rootDir>/src/utilities/$1',
-    '@advanced/(.*)': '<rootDir>/src/advanced/$1',
     // Mock React Native modules
     '^react-native$': '<rootDir>/__mocks__/react-native.js',
   },

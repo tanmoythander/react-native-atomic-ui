@@ -28,8 +28,7 @@
       "@components/*": ["src/components/*"],
       "@theme/*": ["src/theme/*"],
       "@types/*": ["src/types/*"],
-      "@utilities/*": ["src/utilities/*"],
-      "@advanced/*": ["src/advanced/*"]
+      "@utilities/*": ["src/utilities/*"]
     }
   },
   "include": ["src/**/*"],

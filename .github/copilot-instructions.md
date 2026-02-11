@@ -56,11 +56,6 @@ src/
 │   └── themes.ts           # lightTheme & darkTheme definitions
 ├── types/                  # TypeScript type definitions
 │   └── index.ts            # All interface exports
-├── advanced/               # Optional peer dependency components
-│   ├── date-picker/
-│   ├── picker/
-│   ├── file-picker/
-│   └── rich-text/
 └── utilities/              # Helper functions
 ```
 
@@ -104,7 +99,6 @@ TypeScript `paths` configured in `tsconfig.json`:
 @theme/*       → src/theme/*
 @types/*       → src/types/*
 @utilities/*   → src/utilities/*
-@advanced/*    → src/advanced/*
 ```
 
 **Key Rule**: Internal imports within `src/` use relative paths (e.g., `import type { BoxProps } from '../../types/index'`). Do NOT use path aliases for internal imports - only for test/external code.
@@ -124,7 +118,7 @@ All component prop types are centralized in `src/types/index.ts`:
 
 **esbuild config** (`esbuild.config.js`) generates:
 
-- Entry points: `src/index.ts`, `src/theme/index.tsx`, `src/components/index.ts`, plus each `src/advanced/*` folder
+- Entry points: `src/index.ts`, `src/theme/index.tsx`, `src/components/index.ts`
 - Formats: ESM (`.mjs`) + CommonJS (`.js`)
 - **External dependencies**: `react` and `react-native` are NOT bundled (peer dependencies)
 - Tree-shaking enabled
@@ -134,7 +128,6 @@ All component prop types are centralized in `src/types/index.ts`:
 - `dist/index.js` / `dist/index.mjs` - Main package
 - `dist/theme/index.js` - Theme exports
 - `dist/components/index.js` - Component exports
-- `dist/advanced/*/index.js` - Optional components
 
 ### Testing Setup
 
@@ -228,21 +221,6 @@ if (!context) {
 
 Always wrap components that use theme hooks with `ThemeProvider`.
 
-### Optional/Advanced Components
-
-Components in `src/advanced/*` are **placeholder stubs** that throw errors requiring peer dependencies:
-
-```typescript
-export function DatePickerInput() {
-  throw new Error(
-    'DatePickerInput requires peer dependency: @react-native-community/datetimepicker\n' +
-      'Install it with: npm install @react-native-community/datetimepicker'
-  );
-}
-```
-
-**Design pattern**: Library doesn't fail to load if user doesn't install optional peer dependencies. Import fails only at component use time with clear error message.
-
 ### Exports Pattern
 
 The package.json defines **export maps** for tree-shaking:
@@ -251,9 +229,7 @@ The package.json defines **export maps** for tree-shaking:
 {
   ".": { "require": "./dist/index.js", "import": "./dist/index.mjs" },
   "./theme": { "require": "./dist/theme/index.js", "import": "./dist/theme/index.mjs" },
-  "./components": { "require": "./dist/components/index.js", "import": "./dist/components/index.mjs" },
-  "./date-picker": { "require": "./dist/advanced/date-picker/index.js", ... },
-  ...
+  "./components": { "require": "./dist/components/index.js", "import": "./dist/components/index.mjs" }
 }
 ```
 
@@ -283,7 +259,6 @@ Users can import sub-modules: `import { ThemeProvider } from 'react-native-atomi
 
 - **Peer dependencies** (`react`, `react-native`): Update `package.json` and `peerDependencies`
 - **Dev dependencies**: Update normally, run `npm install`, test with `npm test && npm run build`
-- **Optional dependencies**: Update `optionalDependencies` section
 
 ## Build & Deployment Notes
 

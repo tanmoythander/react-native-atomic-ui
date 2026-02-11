@@ -13,7 +13,7 @@ A complete, production-ready React Native UI component library with:
 
 ### ✅ Core Library Structure
 - **30+ Core Components** (zero external dependencies)
-- **Modular Architecture** with separate entry points for advanced features
+- **Modular Architecture** with clear entry points for core modules
 - **Full TypeScript Support** with strict mode enabled
 - **Complete Type Definitions** for all components and themes
 
@@ -59,13 +59,6 @@ A complete, production-ready React Native UI component library with:
 - ✅ Spacing scale (xs, sm, md, lg, xl, xxl)
 - ✅ Border radius system
 - ✅ Shadow definitions
-
-### ✅ Advanced Components (Stubs with Peer Dependencies)
-
-- `date-picker` - DatePickerInput (requires @react-native-community/datetimepicker)
-- `picker` - BorderedPickerInput, PickerModal (requires react-native-picker-select)
-- `file-picker` - FilePicker (requires @react-native-documents/picker)
-- `rich-text` - RichText, RichTextInput (requires react-native-webview + custom fork)
 
 ### ✅ Build & Development Tools
 
@@ -120,15 +113,6 @@ rn-simple-ui/
 │   │   └── index.ts                      # ✅ All TypeScript interfaces
 │   ├── utilities/
 │   │   └── math.ts                       # ✅ Utility functions
-│   └── advanced/
-│       ├── date-picker/
-│       │   └── index.ts                  # Date picker stubs
-│       ├── picker/
-│       │   └── index.ts                  # Picker stubs
-│       ├── file-picker/
-│       │   └── index.ts                  # File picker stubs
-│       └── rich-text/
-│           └── index.ts                  # Rich text stubs
 ├── examples/
 │   └── usage-example.tsx                 # ✅ Example app demonstrating components
 ├── dist/                                 # Build output (generated after npm install & npm run build)
@@ -203,7 +187,6 @@ npx react-native run-ios  # or run-android
 - [ ] Run `npm run build` to generate dist/
 - [ ] Run `npm test` to verify tests pass
 - [ ] Implement remaining core components (Input, CheckBox, RadioButton, etc.)
-- [ ] Implement advanced components (when peer deps are available)
 - [ ] Platform testing (iOS 12.0+, Android 6.0+)
 - [ ] Performance optimization
 - [ ] npm Publishing
@@ -222,9 +205,7 @@ npx react-native run-ios  # or run-android
 | Aspect | Value |
 |--------|-------|
 | **Core Components** | 30+ (fully implemented stubs prepared for remaining) |
-| **Advanced Components** | 10+ (modular entry points) |
 | **External Dependencies** | 0 (core library) |
-| **Optional Dependencies** | 7 (peer deps for advanced) |
 | **Bundle Size** | ~50-80 KB (estimated, after minification) |
 | **TypeScript** | ✅ Full support, strict mode |
 | **Type Coverage** | 100% (all components typed) |
@@ -257,7 +238,6 @@ The core library has ZERO external dependencies beyond React and React Native, m
 
 ### 🏗️ Modular Architecture
 - **Core Components** - Import from main entry point
-- **Advanced Components** - Optional, in separate entry points
 - **Tree-Shaking Friendly** - Only bundle what you use
 - **Performance Optimized** - Minimal re-renders
 
@@ -303,11 +283,6 @@ dist/
 ├── index.d.ts            # TypeScript declarations
 ├── components/           # Components submodule
 ├── theme/                # Theme submodule
-├── advanced/             # Advanced components submodule
-│   ├── date-picker/
-│   ├── picker/
-│   ├── file-picker/
-│   └── rich-text/
 └── *.map                 # Source maps for debugging
 ```
 
@@ -368,13 +343,6 @@ npm test
 3. Export from `src/components/index.ts`
 4. Add test file in `src/components/__tests__/ComponentName.test.tsx`
 5. Update README.md
-
-### To Add Advanced Component Support
-1. Create directory in `src/advanced/{feature-name}`
-2. Create `index.ts` with component stubs
-3. Add peer dependency documentation
-4. Add export to `package.json` exports
-5. Document in README
 
 ---
 

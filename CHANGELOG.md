@@ -14,11 +14,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - System preference detection for automatic theme selection
 - Full TypeScript support with strict mode
 - Comprehensive documentation and examples
-- Advanced components with optional peer dependencies:
-  - Date picker support
-  - Dropdown picker support
-  - File picker support
-  - Rich text display and editing support
 
 ### Changed
 - Initial release
